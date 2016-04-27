@@ -8,22 +8,325 @@
 
 /* Begin PBXBuildFile section */
 		0815B2581CB462A40074DA02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2571CB462A40074DA02 /* AppDelegate.swift */; };
-		0815B25A1CB462A40074DA02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2591CB462A40074DA02 /* ViewController.swift */; };
 		0815B25D1CB462A40074DA02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0815B25B1CB462A40074DA02 /* Main.storyboard */; };
 		0815B2601CB462A40074DA02 /* Magellan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0815B25E1CB462A40074DA02 /* Magellan.xcdatamodeld */; };
 		0815B2621CB462A40074DA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2611CB462A40074DA02 /* Assets.xcassets */; };
 		0815B2651CB462A40074DA02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2631CB462A40074DA02 /* LaunchScreen.storyboard */; };
+		0815B26D1CB462C50074DA02 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0815B26C1CB462C50074DA02 /* Podfile */; };
+		0815B2D81CB4651A0074DA02 /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B28B1CB4651A0074DA02 /* User.png */; };
+		0815B2D91CB4651A0074DA02 /* man.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B28C1CB4651A0074DA02 /* man.png */; };
+		0815B2DA1CB4651A0074DA02 /* paris-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B28D1CB4651A0074DA02 /* paris-background.jpg */; };
+		0815B2DB1CB4651A0074DA02 /* Map Marker Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B28E1CB4651A0074DA02 /* Map Marker Filled-50.png */; };
+		0815B2DC1CB4651A0074DA02 /* uptrend.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B28F1CB4651A0074DA02 /* uptrend.png */; };
+		0815B2DD1CB4651A0074DA02 /* trip_events_skyscraper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2901CB4651A0074DA02 /* trip_events_skyscraper.jpeg */; };
+		0815B2DE1CB4651A0074DA02 /* empire_state_building.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2911CB4651A0074DA02 /* empire_state_building.jpg */; };
+		0815B2DF1CB4651A0074DA02 /* restaurant_seating.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2921CB4651A0074DA02 /* restaurant_seating.jpeg */; };
+		0815B2E01CB4651A0074DA02 /* Check_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2931CB4651A0074DA02 /* Check_mark.png */; };
+		0815B2E11CB4651A0074DA02 /* Menu-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2941CB4651A0074DA02 /* Menu-50.png */; };
+		0815B2E21CB4651A0074DA02 /* Checklist-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2951CB4651A0074DA02 /* Checklist-50.png */; };
+		0815B2E31CB4651A0074DA02 /* Lighthouse-52.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2961CB4651A0074DA02 /* Lighthouse-52.png */; };
+		0815B2E41CB4651A0074DA02 /* snow-capped-mountains.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2971CB4651A0074DA02 /* snow-capped-mountains.png */; };
+		0815B2E51CB4651A0074DA02 /* city-cars-street-buildings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2981CB4651A0074DA02 /* city-cars-street-buildings.jpg */; };
+		0815B2E61CB4651A0074DA02 /* france_mountains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2991CB4651A0074DA02 /* france_mountains.jpg */; };
+		0815B2E71CB4651A0074DA02 /* dollar-sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B29A1CB4651A0074DA02 /* dollar-sign.png */; };
+		0815B2E81CB4651A0074DA02 /* big_ben.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B29B1CB4651A0074DA02 /* big_ben.jpg */; };
+		0815B2E91CB4651A0074DA02 /* Checked_User_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B29C1CB4651A0074DA02 /* Checked_User_Color.png */; };
+		0815B2EA1CB4651A0074DA02 /* cycle-path.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B29D1CB4651A0074DA02 /* cycle-path.jpg */; };
+		0815B2EB1CB4651A0074DA02 /* small-hill-town.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B29E1CB4651A0074DA02 /* small-hill-town.png */; };
+		0815B2EC1CB4651A0074DA02 /* nyc-hwy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B29F1CB4651A0074DA02 /* nyc-hwy.jpg */; };
+		0815B2ED1CB4651A0074DA02 /* statue-of-liberty.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A01CB4651A0074DA02 /* statue-of-liberty.jpg */; };
+		0815B2EE1CB4651A0074DA02 /* bridge_fog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A11CB4651A0074DA02 /* bridge_fog.jpg */; };
+		0815B2EF1CB4651A0074DA02 /* ticket.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A21CB4651A0074DA02 /* ticket.png */; };
+		0815B2F01CB4651A0074DA02 /* san_francisco_bay_bridge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A31CB4651A0074DA02 /* san_francisco_bay_bridge.jpg */; };
+		0815B2F11CB4651A0074DA02 /* louvre-france-cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A41CB4651A0074DA02 /* louvre-france-cropped.jpg */; };
+		0815B2F21CB4651A0074DA02 /* bridge-over-ocean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A51CB4651A0074DA02 /* bridge-over-ocean.jpg */; };
+		0815B2F31CB4651A0074DA02 /* new-eiffel-tower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A61CB4651A0074DA02 /* new-eiffel-tower.jpg */; };
+		0815B2F41CB4651A0074DA02 /* nyc-pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A71CB4651A0074DA02 /* nyc-pic1.jpg */; };
+		0815B2F51CB4651A0074DA02 /* bridge-pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A81CB4651A0074DA02 /* bridge-pic.jpg */; };
+		0815B2F61CB4651A0074DA02 /* dubai-pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2A91CB4651A0074DA02 /* dubai-pic.jpg */; };
+		0815B2F71CB4651A0074DA02 /* wilderness.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2AA1CB4651A0074DA02 /* wilderness.jpg */; };
+		0815B2F81CB4651A0074DA02 /* Checked User Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2AB1CB4651A0074DA02 /* Checked User Filled-50.png */; };
+		0815B2F91CB4651A0074DA02 /* facebook_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2AC1CB4651A0074DA02 /* facebook_logo.png */; };
+		0815B2FA1CB4651A0074DA02 /* blank_man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2AD1CB4651A0074DA02 /* blank_man.jpg */; };
+		0815B2FB1CB4651A0074DA02 /* eiffel-tower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2AE1CB4651A0074DA02 /* eiffel-tower.jpg */; };
+		0815B2FC1CB4651A0074DA02 /* presentation.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2AF1CB4651A0074DA02 /* presentation.png */; };
+		0815B2FD1CB4651A0074DA02 /* Colosseum-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B01CB4651A0074DA02 /* Colosseum-50.png */; };
+		0815B2FE1CB4651A0074DA02 /* airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B11CB4651A0074DA02 /* airplane.png */; };
+		0815B2FF1CB4651A0074DA02 /* Sedan Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B21CB4651A0074DA02 /* Sedan Filled-50.png */; };
+		0815B3001CB4651A0074DA02 /* Add_to_Favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B31CB4651A0074DA02 /* Add_to_Favorites.png */; };
+		0815B3011CB4651A0074DA02 /* hawaii_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B41CB4651A0074DA02 /* hawaii_pic.jpg */; };
+		0815B3021CB4651A0074DA02 /* airplane-symbol-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B51CB4651A0074DA02 /* airplane-symbol-7.png */; };
+		0815B3031CB4651A0074DA02 /* skyscraper_alone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B61CB4651A0074DA02 /* skyscraper_alone.jpg */; };
+		0815B3041CB4651A0074DA02 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B71CB4651A0074DA02 /* camera.png */; };
+		0815B3051CB4651A0074DA02 /* User Groups Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B81CB4651A0074DA02 /* User Groups Filled-50.png */; };
+		0815B3061CB4651A0074DA02 /* tall_building.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2B91CB4651A0074DA02 /* tall_building.jpg */; };
+		0815B3071CB4651A0074DA02 /* Eiffel Tower-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2BA1CB4651A0074DA02 /* Eiffel Tower-50.png */; };
+		0815B3081CB4651A0074DA02 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2BB1CB4651A0074DA02 /* home.png */; };
+		0815B3091CB4651A0074DA02 /* black_color.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2BC1CB4651A0074DA02 /* black_color.jpg */; };
+		0815B30A1CB4651A0074DA02 /* Easy to Find Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2BD1CB4651A0074DA02 /* Easy to Find Filled-50.png */; };
+		0815B30B1CB4651A0074DA02 /* Numbered_List-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2BE1CB4651A0074DA02 /* Numbered_List-50.png */; };
+		0815B30C1CB4651A0074DA02 /* Add User Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2BF1CB4651A0074DA02 /* Add User Filled-50.png */; };
+		0815B30D1CB4651A0074DA02 /* photo-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C01CB4651A0074DA02 /* photo-7.png */; };
+		0815B30E1CB4651A0074DA02 /* Magic-Wand.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C11CB4651A0074DA02 /* Magic-Wand.png */; };
+		0815B30F1CB4651A0074DA02 /* disclosure_indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C21CB4651A0074DA02 /* disclosure_indicator.png */; };
+		0815B3101CB4651A0074DA02 /* down_vote.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C31CB4651A0074DA02 /* down_vote.png */; };
+		0815B3111CB4651A0074DA02 /* Map Editing Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C41CB4651A0074DA02 /* Map Editing Filled-50.png */; };
+		0815B3121CB4651A0074DA02 /* up_vote.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C51CB4651A0074DA02 /* up_vote.png */; };
+		0815B3131CB4651A0074DA02 /* search-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C61CB4651A0074DA02 /* search-7.png */; };
+		0815B3141CB4651A0074DA02 /* city-people-street-walking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C71CB4651A0074DA02 /* city-people-street-walking.jpg */; };
+		0815B3151CB4651A0074DA02 /* eiffel_tower_pic_from_bog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C81CB4651A0074DA02 /* eiffel_tower_pic_from_bog.jpg */; };
+		0815B3161CB4651A0074DA02 /* new_hotel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2C91CB4651A0074DA02 /* new_hotel.png */; };
+		0815B3171CB4651A0074DA02 /* hotel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2CA1CB4651A0074DA02 /* hotel.png */; };
+		0815B3181CB4651A0074DA02 /* sail-boat-pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2CB1CB4651A0074DA02 /* sail-boat-pic.jpg */; };
+		0815B3191CB4651A0074DA02 /* Add Ticket Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2CC1CB4651A0074DA02 /* Add Ticket Filled-50.png */; };
+		0815B31A1CB4651A0074DA02 /* Globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2CD1CB4651A0074DA02 /* Globe.png */; };
+		0815B31B1CB4651A0074DA02 /* Tourist-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2CE1CB4651A0074DA02 /* Tourist-50.png */; };
+		0815B31C1CB4651A0074DA02 /* earth-usa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2CF1CB4651A0074DA02 /* earth-usa.png */; };
+		0815B31D1CB4651A0074DA02 /* Horseback Riding-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0815B2D01CB4651A0074DA02 /* Horseback Riding-50.png */; };
+		0815B31E1CB4651B0074DA02 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2D11CB4651A0074DA02 /* Task.swift */; };
+		0815B31F1CB4651B0074DA02 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2D21CB4651A0074DA02 /* User.swift */; };
+		0815B3201CB4651B0074DA02 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2D31CB4651A0074DA02 /* Trip.swift */; };
+		0815B3211CB4651B0074DA02 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2D41CB4651A0074DA02 /* Destination.swift */; };
+		0815B3221CB4651B0074DA02 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2D51CB4651A0074DA02 /* Day.swift */; };
+		0815B3231CB4651B0074DA02 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2D61CB4651A0074DA02 /* Event.swift */; };
+		0815B3241CB4651B0074DA02 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2D71CB4651A0074DA02 /* Manager.swift */; };
+		0815B35E1CB465F00074DA02 /* giveAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3251CB465F00074DA02 /* giveAdviceTableViewController.swift */; };
+		0815B35F1CB465F00074DA02 /* giveAdviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3261CB465F00074DA02 /* giveAdviceTableViewCell.swift */; };
+		0815B3601CB465F00074DA02 /* searchParticipantsInAddGroupTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3271CB465F00074DA02 /* searchParticipantsInAddGroupTrip.swift */; };
+		0815B3611CB465F00074DA02 /* infoAndNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3281CB465F00074DA02 /* infoAndNotificationTableViewController.swift */; };
+		0815B3621CB465F00074DA02 /* infoAndNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3291CB465F00074DA02 /* infoAndNotificationTableViewCell.swift */; };
+		0815B3631CB465F00074DA02 /* topTripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B32A1CB465F00074DA02 /* topTripsTableViewCell.swift */; };
+		0815B3641CB465F00074DA02 /* addParticipantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B32B1CB465F00074DA02 /* addParticipantsTableViewCell.swift */; };
+		0815B3651CB465F00074DA02 /* addParticipantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B32C1CB465F00074DA02 /* addParticipantsViewController.swift */; };
+		0815B3661CB465F00074DA02 /* topTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B32D1CB465F00074DA02 /* topTripsViewController.swift */; };
+		0815B3671CB465F00074DA02 /* viewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B32E1CB465F00074DA02 /* viewControllerCell.swift */; };
+		0815B3681CB465F00074DA02 /* tripShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B32F1CB465F00074DA02 /* tripShowTableViewCell.swift */; };
+		0815B3691CB465F00074DA02 /* eventShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3301CB465F00074DA02 /* eventShowViewController.swift */; };
+		0815B36A1CB465F00074DA02 /* topEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3311CB465F00074DA02 /* topEventsCell.swift */; };
+		0815B36B1CB465F00074DA02 /* userProfileTripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3321CB465F00074DA02 /* userProfileTripCell.swift */; };
+		0815B36C1CB465F00074DA02 /* tripFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3331CB465F00074DA02 /* tripFeedCell.swift */; };
+		0815B36D1CB465F00074DA02 /* addGroupTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3341CB465F00074DA02 /* addGroupTripViewController.swift */; };
+		0815B36E1CB465F00074DA02 /* manualAddEventFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3351CB465F00074DA02 /* manualAddEventFieldsViewController.swift */; };
+		0815B36F1CB465F00074DA02 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3361CB465F00074DA02 /* CollectionViewCell.swift */; };
+		0815B3701CB465F00074DA02 /* tripPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3371CB465F00074DA02 /* tripPhotosCollectionViewController.swift */; };
+		0815B3711CB465F00074DA02 /* addTripNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3381CB465F00074DA02 /* addTripNameViewController.swift */; };
+		0815B3721CB465F00074DA02 /* businessAddEventDateTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3391CB465F00074DA02 /* businessAddEventDateTimeViewController.swift */; };
+		0815B3731CB465F00074DA02 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B33A1CB465F00074DA02 /* welcomeViewController.swift */; };
+		0815B3741CB465F00074DA02 /* businessServiceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B33B1CB465F00074DA02 /* businessServiceInfoViewController.swift */; };
+		0815B3751CB465F00074DA02 /* addFlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B33C1CB465F00074DA02 /* addFlightsViewController.swift */; };
+		0815B3761CB465F00074DA02 /* travelAgentOptionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B33D1CB465F00074DA02 /* travelAgentOptionSelectViewController.swift */; };
+		0815B3771CB465F00074DA02 /* businessAddAServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B33E1CB465F00074DA02 /* businessAddAServiceViewController.swift */; };
+		0815B3781CB465F00074DA02 /* TableViewSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B33F1CB465F00074DA02 /* TableViewSearchController.swift */; };
+		0815B3791CB465F00074DA02 /* businessCategoriesSpecificShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3401CB465F00074DA02 /* businessCategoriesSpecificShowViewController.swift */; };
+		0815B37A1CB465F00074DA02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3411CB465F00074DA02 /* ViewController.swift */; };
+		0815B37B1CB465F00074DA02 /* exploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3421CB465F00074DA02 /* exploreTableViewCell.swift */; };
+		0815B37C1CB465F00074DA02 /* tripFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3431CB465F00074DA02 /* tripFeedViewController.swift */; };
+		0815B37D1CB465F00074DA02 /* tripShowSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3441CB465F00074DA02 /* tripShowSocialViewController.swift */; };
+		0815B37E1CB465F00074DA02 /* addBusinessCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3451CB465F00074DA02 /* addBusinessCategoryViewController.swift */; };
+		0815B37F1CB465F00074DA02 /* tripBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3461CB465F00074DA02 /* tripBudgetViewController.swift */; };
+		0815B3801CB465F00074DA02 /* userProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3471CB465F00074DA02 /* userProfileViewController.swift */; };
+		0815B3811CB465F00074DA02 /* exploreProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3481CB465F00074DA02 /* exploreProfilesViewController.swift */; };
+		0815B3821CB465F00074DA02 /* businessCategoryShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3491CB465F00074DA02 /* businessCategoryShowViewController.swift */; };
+		0815B3831CB465F00074DA02 /* travelAgentPlanTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B34A1CB465F00074DA02 /* travelAgentPlanTripViewController.swift */; };
+		0815B3841CB465F00074DA02 /* businessSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B34B1CB465F00074DA02 /* businessSignUpViewController.swift */; };
+		0815B3851CB465F00074DA02 /* businessHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B34C1CB465F00074DA02 /* businessHomeViewController.swift */; };
+		0815B3861CB465F00074DA02 /* businessAddEventTitleDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B34D1CB465F00074DA02 /* businessAddEventTitleDescriptionViewController.swift */; };
+		0815B3871CB465F00074DA02 /* businessEventsShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B34E1CB465F00074DA02 /* businessEventsShowViewController.swift */; };
+		0815B3881CB465F00074DA02 /* businessAddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B34F1CB465F00074DA02 /* businessAddEventViewController.swift */; };
+		0815B3891CB465F00074DA02 /* searchDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3501CB465F00074DA02 /* searchDestinationViewController.swift */; };
+		0815B38A1CB465F00074DA02 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3511CB465F00074DA02 /* SearchResultsController.swift */; };
+		0815B38B1CB465F00074DA02 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3521CB465F00074DA02 /* SignInViewController.swift */; };
+		0815B38C1CB465F00074DA02 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3531CB465F00074DA02 /* SignUpViewController.swift */; };
+		0815B38D1CB465F00074DA02 /* PlanTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3541CB465F00074DA02 /* PlanTripViewController.swift */; };
+		0815B38E1CB465F00074DA02 /* searchFlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3551CB465F00074DA02 /* searchFlightsViewController.swift */; };
+		0815B38F1CB465F00074DA02 /* TripShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3561CB465F00074DA02 /* TripShowViewController.swift */; };
+		0815B3901CB465F00074DA02 /* DestinationShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3571CB465F00074DA02 /* DestinationShowViewController.swift */; };
+		0815B3911CB465F00074DA02 /* TripDatePickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3581CB465F00074DA02 /* TripDatePickViewController.swift */; };
+		0815B3921CB465F00074DA02 /* DayShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3591CB465F00074DA02 /* DayShowViewController.swift */; };
+		0815B3931CB465F00074DA02 /* EventAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B35A1CB465F00074DA02 /* EventAddViewController.swift */; };
+		0815B3941CB465F00074DA02 /* businessAddEventFrequencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B35B1CB465F00074DA02 /* businessAddEventFrequencyViewController.swift */; };
+		0815B3951CB465F00074DA02 /* ManualAddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B35C1CB465F00074DA02 /* ManualAddEventController.swift */; };
+		0815B3961CB465F00074DA02 /* tripEventsShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B35D1CB465F00074DA02 /* tripEventsShow.swift */; };
+		0815B3BD1CB554F70074DA02 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3BC1CB554F70074DA02 /* Bolts.framework */; };
+		0815B3BF1CB554FE0074DA02 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3BE1CB554FE0074DA02 /* Parse.framework */; };
+		0815B3C11CB555170074DA02 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3C01CB555170074DA02 /* AudioToolbox.framework */; };
+		0815B3C31CB555220074DA02 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3C21CB555220074DA02 /* CFNetwork.framework */; };
+		0815B3C51CB5552A0074DA02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3C41CB5552A0074DA02 /* CoreGraphics.framework */; };
+		0815B3C71CB555310074DA02 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3C61CB555300074DA02 /* CoreLocation.framework */; };
+		0815B3C91CB5553F0074DA02 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3C81CB5553F0074DA02 /* QuartzCore.framework */; };
+		0815B3CB1CB555460074DA02 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3CA1CB555460074DA02 /* Security.framework */; };
+		0815B3CD1CB5554D0074DA02 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3CC1CB5554D0074DA02 /* StoreKit.framework */; };
+		0815B3CF1CB555560074DA02 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3CE1CB555550074DA02 /* SystemConfiguration.framework */; };
+		0815B3D11CB5555D0074DA02 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3D01CB5555D0074DA02 /* libz.tbd */; };
+		0815B3D31CB555680074DA02 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3D21CB555680074DA02 /* libsqlite3.tbd */; };
+		087702FF1CB855EC0009DE49 /* addHotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087702FE1CB855EC0009DE49 /* addHotelViewController.swift */; };
+		08F9F4C51CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9F4C41CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift */; };
+		08F9F4C71CBC4AB400A158DE /* addPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9F4C61CBC4AB400A158DE /* addPlaceTableViewCell.swift */; };
+		5F75DC16B72BD6F0FA1BDB88 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE40A7485F010F27C977BF2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0815B2541CB462A40074DA02 /* Magellan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magellan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0815B2571CB462A40074DA02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0815B2591CB462A40074DA02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0815B25C1CB462A40074DA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0815B25F1CB462A40074DA02 /* Magellan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Magellan.xcdatamodel; sourceTree = "<group>"; };
 		0815B2611CB462A40074DA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0815B2641CB462A40074DA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0815B2661CB462A40074DA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0815B26C1CB462C50074DA02 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		0815B28A1CB4651A0074DA02 /* Magellan_Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magellan_Bridging_Header.h; sourceTree = "<group>"; };
+		0815B28B1CB4651A0074DA02 /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
+		0815B28C1CB4651A0074DA02 /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man.png; sourceTree = "<group>"; };
+		0815B28D1CB4651A0074DA02 /* paris-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "paris-background.jpg"; sourceTree = "<group>"; };
+		0815B28E1CB4651A0074DA02 /* Map Marker Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map Marker Filled-50.png"; sourceTree = "<group>"; };
+		0815B28F1CB4651A0074DA02 /* uptrend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uptrend.png; sourceTree = "<group>"; };
+		0815B2901CB4651A0074DA02 /* trip_events_skyscraper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trip_events_skyscraper.jpeg; sourceTree = "<group>"; };
+		0815B2911CB4651A0074DA02 /* empire_state_building.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = empire_state_building.jpg; sourceTree = "<group>"; };
+		0815B2921CB4651A0074DA02 /* restaurant_seating.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = restaurant_seating.jpeg; sourceTree = "<group>"; };
+		0815B2931CB4651A0074DA02 /* Check_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check_mark.png; sourceTree = "<group>"; };
+		0815B2941CB4651A0074DA02 /* Menu-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu-50.png"; sourceTree = "<group>"; };
+		0815B2951CB4651A0074DA02 /* Checklist-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checklist-50.png"; sourceTree = "<group>"; };
+		0815B2961CB4651A0074DA02 /* Lighthouse-52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lighthouse-52.png"; sourceTree = "<group>"; };
+		0815B2971CB4651A0074DA02 /* snow-capped-mountains.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snow-capped-mountains.png"; sourceTree = "<group>"; };
+		0815B2981CB4651A0074DA02 /* city-cars-street-buildings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "city-cars-street-buildings.jpg"; sourceTree = "<group>"; };
+		0815B2991CB4651A0074DA02 /* france_mountains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = france_mountains.jpg; sourceTree = "<group>"; };
+		0815B29A1CB4651A0074DA02 /* dollar-sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar-sign.png"; sourceTree = "<group>"; };
+		0815B29B1CB4651A0074DA02 /* big_ben.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = big_ben.jpg; sourceTree = "<group>"; };
+		0815B29C1CB4651A0074DA02 /* Checked_User_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checked_User_Color.png; sourceTree = "<group>"; };
+		0815B29D1CB4651A0074DA02 /* cycle-path.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cycle-path.jpg"; sourceTree = "<group>"; };
+		0815B29E1CB4651A0074DA02 /* small-hill-town.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-hill-town.png"; sourceTree = "<group>"; };
+		0815B29F1CB4651A0074DA02 /* nyc-hwy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nyc-hwy.jpg"; sourceTree = "<group>"; };
+		0815B2A01CB4651A0074DA02 /* statue-of-liberty.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "statue-of-liberty.jpg"; sourceTree = "<group>"; };
+		0815B2A11CB4651A0074DA02 /* bridge_fog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bridge_fog.jpg; sourceTree = "<group>"; };
+		0815B2A21CB4651A0074DA02 /* ticket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ticket.png; sourceTree = "<group>"; };
+		0815B2A31CB4651A0074DA02 /* san_francisco_bay_bridge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = san_francisco_bay_bridge.jpg; sourceTree = "<group>"; };
+		0815B2A41CB4651A0074DA02 /* louvre-france-cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "louvre-france-cropped.jpg"; sourceTree = "<group>"; };
+		0815B2A51CB4651A0074DA02 /* bridge-over-ocean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bridge-over-ocean.jpg"; sourceTree = "<group>"; };
+		0815B2A61CB4651A0074DA02 /* new-eiffel-tower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "new-eiffel-tower.jpg"; sourceTree = "<group>"; };
+		0815B2A71CB4651A0074DA02 /* nyc-pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nyc-pic1.jpg"; sourceTree = "<group>"; };
+		0815B2A81CB4651A0074DA02 /* bridge-pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bridge-pic.jpg"; sourceTree = "<group>"; };
+		0815B2A91CB4651A0074DA02 /* dubai-pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dubai-pic.jpg"; sourceTree = "<group>"; };
+		0815B2AA1CB4651A0074DA02 /* wilderness.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wilderness.jpg; sourceTree = "<group>"; };
+		0815B2AB1CB4651A0074DA02 /* Checked User Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked User Filled-50.png"; sourceTree = "<group>"; };
+		0815B2AC1CB4651A0074DA02 /* facebook_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_logo.png; sourceTree = "<group>"; };
+		0815B2AD1CB4651A0074DA02 /* blank_man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blank_man.jpg; sourceTree = "<group>"; };
+		0815B2AE1CB4651A0074DA02 /* eiffel-tower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "eiffel-tower.jpg"; sourceTree = "<group>"; };
+		0815B2AF1CB4651A0074DA02 /* presentation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presentation.png; sourceTree = "<group>"; };
+		0815B2B01CB4651A0074DA02 /* Colosseum-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colosseum-50.png"; sourceTree = "<group>"; };
+		0815B2B11CB4651A0074DA02 /* airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplane.png; sourceTree = "<group>"; };
+		0815B2B21CB4651A0074DA02 /* Sedan Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sedan Filled-50.png"; sourceTree = "<group>"; };
+		0815B2B31CB4651A0074DA02 /* Add_to_Favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add_to_Favorites.png; sourceTree = "<group>"; };
+		0815B2B41CB4651A0074DA02 /* hawaii_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hawaii_pic.jpg; sourceTree = "<group>"; };
+		0815B2B51CB4651A0074DA02 /* airplane-symbol-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airplane-symbol-7.png"; sourceTree = "<group>"; };
+		0815B2B61CB4651A0074DA02 /* skyscraper_alone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = skyscraper_alone.jpg; sourceTree = "<group>"; };
+		0815B2B71CB4651A0074DA02 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		0815B2B81CB4651A0074DA02 /* User Groups Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Groups Filled-50.png"; sourceTree = "<group>"; };
+		0815B2B91CB4651A0074DA02 /* tall_building.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tall_building.jpg; sourceTree = "<group>"; };
+		0815B2BA1CB4651A0074DA02 /* Eiffel Tower-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Eiffel Tower-50.png"; sourceTree = "<group>"; };
+		0815B2BB1CB4651A0074DA02 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		0815B2BC1CB4651A0074DA02 /* black_color.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black_color.jpg; sourceTree = "<group>"; };
+		0815B2BD1CB4651A0074DA02 /* Easy to Find Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Easy to Find Filled-50.png"; sourceTree = "<group>"; };
+		0815B2BE1CB4651A0074DA02 /* Numbered_List-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Numbered_List-50.png"; sourceTree = "<group>"; };
+		0815B2BF1CB4651A0074DA02 /* Add User Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add User Filled-50.png"; sourceTree = "<group>"; };
+		0815B2C01CB4651A0074DA02 /* photo-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-7.png"; sourceTree = "<group>"; };
+		0815B2C11CB4651A0074DA02 /* Magic-Wand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Magic-Wand.png"; sourceTree = "<group>"; };
+		0815B2C21CB4651A0074DA02 /* disclosure_indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disclosure_indicator.png; sourceTree = "<group>"; };
+		0815B2C31CB4651A0074DA02 /* down_vote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_vote.png; sourceTree = "<group>"; };
+		0815B2C41CB4651A0074DA02 /* Map Editing Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map Editing Filled-50.png"; sourceTree = "<group>"; };
+		0815B2C51CB4651A0074DA02 /* up_vote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_vote.png; sourceTree = "<group>"; };
+		0815B2C61CB4651A0074DA02 /* search-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-7.png"; sourceTree = "<group>"; };
+		0815B2C71CB4651A0074DA02 /* city-people-street-walking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "city-people-street-walking.jpg"; sourceTree = "<group>"; };
+		0815B2C81CB4651A0074DA02 /* eiffel_tower_pic_from_bog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eiffel_tower_pic_from_bog.jpg; sourceTree = "<group>"; };
+		0815B2C91CB4651A0074DA02 /* new_hotel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_hotel.png; sourceTree = "<group>"; };
+		0815B2CA1CB4651A0074DA02 /* hotel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotel.png; sourceTree = "<group>"; };
+		0815B2CB1CB4651A0074DA02 /* sail-boat-pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sail-boat-pic.jpg"; sourceTree = "<group>"; };
+		0815B2CC1CB4651A0074DA02 /* Add Ticket Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add Ticket Filled-50.png"; sourceTree = "<group>"; };
+		0815B2CD1CB4651A0074DA02 /* Globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Globe.png; sourceTree = "<group>"; };
+		0815B2CE1CB4651A0074DA02 /* Tourist-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tourist-50.png"; sourceTree = "<group>"; };
+		0815B2CF1CB4651A0074DA02 /* earth-usa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth-usa.png"; sourceTree = "<group>"; };
+		0815B2D01CB4651A0074DA02 /* Horseback Riding-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Horseback Riding-50.png"; sourceTree = "<group>"; };
+		0815B2D11CB4651A0074DA02 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		0815B2D21CB4651A0074DA02 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0815B2D31CB4651A0074DA02 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		0815B2D41CB4651A0074DA02 /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		0815B2D51CB4651A0074DA02 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		0815B2D61CB4651A0074DA02 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		0815B2D71CB4651A0074DA02 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		0815B3251CB465F00074DA02 /* giveAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = giveAdviceTableViewController.swift; sourceTree = "<group>"; };
+		0815B3261CB465F00074DA02 /* giveAdviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = giveAdviceTableViewCell.swift; sourceTree = "<group>"; };
+		0815B3271CB465F00074DA02 /* searchParticipantsInAddGroupTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchParticipantsInAddGroupTrip.swift; sourceTree = "<group>"; };
+		0815B3281CB465F00074DA02 /* infoAndNotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoAndNotificationTableViewController.swift; sourceTree = "<group>"; };
+		0815B3291CB465F00074DA02 /* infoAndNotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoAndNotificationTableViewCell.swift; sourceTree = "<group>"; };
+		0815B32A1CB465F00074DA02 /* topTripsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topTripsTableViewCell.swift; sourceTree = "<group>"; };
+		0815B32B1CB465F00074DA02 /* addParticipantsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addParticipantsTableViewCell.swift; sourceTree = "<group>"; };
+		0815B32C1CB465F00074DA02 /* addParticipantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addParticipantsViewController.swift; sourceTree = "<group>"; };
+		0815B32D1CB465F00074DA02 /* topTripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topTripsViewController.swift; sourceTree = "<group>"; };
+		0815B32E1CB465F00074DA02 /* viewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewControllerCell.swift; sourceTree = "<group>"; };
+		0815B32F1CB465F00074DA02 /* tripShowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripShowTableViewCell.swift; sourceTree = "<group>"; };
+		0815B3301CB465F00074DA02 /* eventShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventShowViewController.swift; sourceTree = "<group>"; };
+		0815B3311CB465F00074DA02 /* topEventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topEventsCell.swift; sourceTree = "<group>"; };
+		0815B3321CB465F00074DA02 /* userProfileTripCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userProfileTripCell.swift; sourceTree = "<group>"; };
+		0815B3331CB465F00074DA02 /* tripFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripFeedCell.swift; sourceTree = "<group>"; };
+		0815B3341CB465F00074DA02 /* addGroupTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addGroupTripViewController.swift; sourceTree = "<group>"; };
+		0815B3351CB465F00074DA02 /* manualAddEventFieldsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = manualAddEventFieldsViewController.swift; sourceTree = "<group>"; };
+		0815B3361CB465F00074DA02 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		0815B3371CB465F00074DA02 /* tripPhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		0815B3381CB465F00074DA02 /* addTripNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTripNameViewController.swift; sourceTree = "<group>"; };
+		0815B3391CB465F00074DA02 /* businessAddEventDateTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessAddEventDateTimeViewController.swift; sourceTree = "<group>"; };
+		0815B33A1CB465F00074DA02 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
+		0815B33B1CB465F00074DA02 /* businessServiceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessServiceInfoViewController.swift; sourceTree = "<group>"; };
+		0815B33C1CB465F00074DA02 /* addFlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addFlightsViewController.swift; sourceTree = "<group>"; };
+		0815B33D1CB465F00074DA02 /* travelAgentOptionSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = travelAgentOptionSelectViewController.swift; sourceTree = "<group>"; };
+		0815B33E1CB465F00074DA02 /* businessAddAServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessAddAServiceViewController.swift; sourceTree = "<group>"; };
+		0815B33F1CB465F00074DA02 /* TableViewSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSearchController.swift; sourceTree = "<group>"; };
+		0815B3401CB465F00074DA02 /* businessCategoriesSpecificShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessCategoriesSpecificShowViewController.swift; sourceTree = "<group>"; };
+		0815B3411CB465F00074DA02 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0815B3421CB465F00074DA02 /* exploreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exploreTableViewCell.swift; sourceTree = "<group>"; };
+		0815B3431CB465F00074DA02 /* tripFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripFeedViewController.swift; sourceTree = "<group>"; };
+		0815B3441CB465F00074DA02 /* tripShowSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripShowSocialViewController.swift; sourceTree = "<group>"; };
+		0815B3451CB465F00074DA02 /* addBusinessCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addBusinessCategoryViewController.swift; sourceTree = "<group>"; };
+		0815B3461CB465F00074DA02 /* tripBudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripBudgetViewController.swift; sourceTree = "<group>"; };
+		0815B3471CB465F00074DA02 /* userProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userProfileViewController.swift; sourceTree = "<group>"; };
+		0815B3481CB465F00074DA02 /* exploreProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exploreProfilesViewController.swift; sourceTree = "<group>"; };
+		0815B3491CB465F00074DA02 /* businessCategoryShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessCategoryShowViewController.swift; sourceTree = "<group>"; };
+		0815B34A1CB465F00074DA02 /* travelAgentPlanTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = travelAgentPlanTripViewController.swift; sourceTree = "<group>"; };
+		0815B34B1CB465F00074DA02 /* businessSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessSignUpViewController.swift; sourceTree = "<group>"; };
+		0815B34C1CB465F00074DA02 /* businessHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessHomeViewController.swift; sourceTree = "<group>"; };
+		0815B34D1CB465F00074DA02 /* businessAddEventTitleDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessAddEventTitleDescriptionViewController.swift; sourceTree = "<group>"; };
+		0815B34E1CB465F00074DA02 /* businessEventsShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessEventsShowViewController.swift; sourceTree = "<group>"; };
+		0815B34F1CB465F00074DA02 /* businessAddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessAddEventViewController.swift; sourceTree = "<group>"; };
+		0815B3501CB465F00074DA02 /* searchDestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchDestinationViewController.swift; sourceTree = "<group>"; };
+		0815B3511CB465F00074DA02 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
+		0815B3521CB465F00074DA02 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0815B3531CB465F00074DA02 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0815B3541CB465F00074DA02 /* PlanTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanTripViewController.swift; sourceTree = "<group>"; };
+		0815B3551CB465F00074DA02 /* searchFlightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchFlightsViewController.swift; sourceTree = "<group>"; };
+		0815B3561CB465F00074DA02 /* TripShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripShowViewController.swift; sourceTree = "<group>"; };
+		0815B3571CB465F00074DA02 /* DestinationShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationShowViewController.swift; sourceTree = "<group>"; };
+		0815B3581CB465F00074DA02 /* TripDatePickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDatePickViewController.swift; sourceTree = "<group>"; };
+		0815B3591CB465F00074DA02 /* DayShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayShowViewController.swift; sourceTree = "<group>"; };
+		0815B35A1CB465F00074DA02 /* EventAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAddViewController.swift; sourceTree = "<group>"; };
+		0815B35B1CB465F00074DA02 /* businessAddEventFrequencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessAddEventFrequencyViewController.swift; sourceTree = "<group>"; };
+		0815B35C1CB465F00074DA02 /* ManualAddEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualAddEventController.swift; sourceTree = "<group>"; };
+		0815B35D1CB465F00074DA02 /* tripEventsShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripEventsShow.swift; sourceTree = "<group>"; };
+		0815B3BC1CB554F70074DA02 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0815B3BE1CB554FE0074DA02 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0815B3C01CB555170074DA02 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0815B3C21CB555220074DA02 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0815B3C41CB5552A0074DA02 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0815B3C61CB555300074DA02 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0815B3C81CB5553F0074DA02 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0815B3CA1CB555460074DA02 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0815B3CC1CB5554D0074DA02 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0815B3CE1CB555550074DA02 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0815B3D01CB5555D0074DA02 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0815B3D21CB555680074DA02 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		087702FE1CB855EC0009DE49 /* addHotelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHotelViewController.swift; sourceTree = "<group>"; };
+		08F9F4C41CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addPlaceYouveBeenTableViewController.swift; sourceTree = "<group>"; };
+		08F9F4C61CBC4AB400A158DE /* addPlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addPlaceTableViewCell.swift; sourceTree = "<group>"; };
+		50D418EC649B9DAE9FCC8834 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6DE40A7485F010F27C977BF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90C429EFB30ED5EABC28C61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +334,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0815B3D31CB555680074DA02 /* libsqlite3.tbd in Frameworks */,
+				0815B3D11CB5555D0074DA02 /* libz.tbd in Frameworks */,
+				0815B3CF1CB555560074DA02 /* SystemConfiguration.framework in Frameworks */,
+				0815B3CD1CB5554D0074DA02 /* StoreKit.framework in Frameworks */,
+				0815B3CB1CB555460074DA02 /* Security.framework in Frameworks */,
+				0815B3C91CB5553F0074DA02 /* QuartzCore.framework in Frameworks */,
+				0815B3C71CB555310074DA02 /* CoreLocation.framework in Frameworks */,
+				0815B3C51CB5552A0074DA02 /* CoreGraphics.framework in Frameworks */,
+				0815B3C31CB555220074DA02 /* CFNetwork.framework in Frameworks */,
+				0815B3C11CB555170074DA02 /* AudioToolbox.framework in Frameworks */,
+				0815B3BD1CB554F70074DA02 /* Bolts.framework in Frameworks */,
+				5F75DC16B72BD6F0FA1BDB88 /* libPods.a in Frameworks */,
+				0815B3BF1CB554FE0074DA02 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +356,89 @@
 		0815B24B1CB462A40074DA02 = {
 			isa = PBXGroup;
 			children = (
+				0815B26C1CB462C50074DA02 /* Podfile */,
+				0815B28A1CB4651A0074DA02 /* Magellan_Bridging_Header.h */,
+				0815B28B1CB4651A0074DA02 /* User.png */,
+				0815B28C1CB4651A0074DA02 /* man.png */,
+				0815B28D1CB4651A0074DA02 /* paris-background.jpg */,
+				0815B28E1CB4651A0074DA02 /* Map Marker Filled-50.png */,
+				0815B28F1CB4651A0074DA02 /* uptrend.png */,
+				0815B2901CB4651A0074DA02 /* trip_events_skyscraper.jpeg */,
+				0815B2911CB4651A0074DA02 /* empire_state_building.jpg */,
+				0815B2921CB4651A0074DA02 /* restaurant_seating.jpeg */,
+				0815B2931CB4651A0074DA02 /* Check_mark.png */,
+				0815B2941CB4651A0074DA02 /* Menu-50.png */,
+				0815B2951CB4651A0074DA02 /* Checklist-50.png */,
+				0815B2961CB4651A0074DA02 /* Lighthouse-52.png */,
+				0815B2971CB4651A0074DA02 /* snow-capped-mountains.png */,
+				0815B2981CB4651A0074DA02 /* city-cars-street-buildings.jpg */,
+				0815B2991CB4651A0074DA02 /* france_mountains.jpg */,
+				0815B29A1CB4651A0074DA02 /* dollar-sign.png */,
+				0815B29B1CB4651A0074DA02 /* big_ben.jpg */,
+				0815B29C1CB4651A0074DA02 /* Checked_User_Color.png */,
+				0815B29D1CB4651A0074DA02 /* cycle-path.jpg */,
+				0815B29E1CB4651A0074DA02 /* small-hill-town.png */,
+				0815B29F1CB4651A0074DA02 /* nyc-hwy.jpg */,
+				0815B2A01CB4651A0074DA02 /* statue-of-liberty.jpg */,
+				0815B2A11CB4651A0074DA02 /* bridge_fog.jpg */,
+				0815B2A21CB4651A0074DA02 /* ticket.png */,
+				0815B2A31CB4651A0074DA02 /* san_francisco_bay_bridge.jpg */,
+				0815B2A41CB4651A0074DA02 /* louvre-france-cropped.jpg */,
+				0815B2A51CB4651A0074DA02 /* bridge-over-ocean.jpg */,
+				0815B2A61CB4651A0074DA02 /* new-eiffel-tower.jpg */,
+				0815B2A71CB4651A0074DA02 /* nyc-pic1.jpg */,
+				0815B2A81CB4651A0074DA02 /* bridge-pic.jpg */,
+				0815B2A91CB4651A0074DA02 /* dubai-pic.jpg */,
+				0815B2AA1CB4651A0074DA02 /* wilderness.jpg */,
+				0815B2AB1CB4651A0074DA02 /* Checked User Filled-50.png */,
+				0815B2AC1CB4651A0074DA02 /* facebook_logo.png */,
+				0815B2AD1CB4651A0074DA02 /* blank_man.jpg */,
+				0815B2AE1CB4651A0074DA02 /* eiffel-tower.jpg */,
+				0815B2AF1CB4651A0074DA02 /* presentation.png */,
+				0815B2B01CB4651A0074DA02 /* Colosseum-50.png */,
+				0815B2B11CB4651A0074DA02 /* airplane.png */,
+				0815B2B21CB4651A0074DA02 /* Sedan Filled-50.png */,
+				0815B2B31CB4651A0074DA02 /* Add_to_Favorites.png */,
+				0815B2B41CB4651A0074DA02 /* hawaii_pic.jpg */,
+				0815B2B51CB4651A0074DA02 /* airplane-symbol-7.png */,
+				0815B2B61CB4651A0074DA02 /* skyscraper_alone.jpg */,
+				0815B2B71CB4651A0074DA02 /* camera.png */,
+				0815B2B81CB4651A0074DA02 /* User Groups Filled-50.png */,
+				0815B2B91CB4651A0074DA02 /* tall_building.jpg */,
+				0815B2BA1CB4651A0074DA02 /* Eiffel Tower-50.png */,
+				0815B2BB1CB4651A0074DA02 /* home.png */,
+				0815B2BC1CB4651A0074DA02 /* black_color.jpg */,
+				0815B2BD1CB4651A0074DA02 /* Easy to Find Filled-50.png */,
+				0815B2BE1CB4651A0074DA02 /* Numbered_List-50.png */,
+				0815B2BF1CB4651A0074DA02 /* Add User Filled-50.png */,
+				0815B2C01CB4651A0074DA02 /* photo-7.png */,
+				0815B2C11CB4651A0074DA02 /* Magic-Wand.png */,
+				0815B2C21CB4651A0074DA02 /* disclosure_indicator.png */,
+				0815B2C31CB4651A0074DA02 /* down_vote.png */,
+				0815B2C41CB4651A0074DA02 /* Map Editing Filled-50.png */,
+				0815B2C51CB4651A0074DA02 /* up_vote.png */,
+				0815B2C61CB4651A0074DA02 /* search-7.png */,
+				0815B2C71CB4651A0074DA02 /* city-people-street-walking.jpg */,
+				0815B2C81CB4651A0074DA02 /* eiffel_tower_pic_from_bog.jpg */,
+				0815B2C91CB4651A0074DA02 /* new_hotel.png */,
+				0815B2CA1CB4651A0074DA02 /* hotel.png */,
+				0815B2CB1CB4651A0074DA02 /* sail-boat-pic.jpg */,
+				0815B2CC1CB4651A0074DA02 /* Add Ticket Filled-50.png */,
+				0815B2CD1CB4651A0074DA02 /* Globe.png */,
+				0815B2CE1CB4651A0074DA02 /* Tourist-50.png */,
+				0815B2CF1CB4651A0074DA02 /* earth-usa.png */,
+				0815B2D01CB4651A0074DA02 /* Horseback Riding-50.png */,
+				0815B2D11CB4651A0074DA02 /* Task.swift */,
+				0815B2D21CB4651A0074DA02 /* User.swift */,
+				0815B2D31CB4651A0074DA02 /* Trip.swift */,
+				0815B2D41CB4651A0074DA02 /* Destination.swift */,
+				0815B2D51CB4651A0074DA02 /* Day.swift */,
+				0815B2D61CB4651A0074DA02 /* Event.swift */,
+				0815B2D71CB4651A0074DA02 /* Manager.swift */,
 				0815B2561CB462A40074DA02 /* Magellan */,
 				0815B2551CB462A40074DA02 /* Products */,
+				2A9EA101360D4233BFD06B44 /* Pods */,
+				32147BD1724F8C8FEE658F26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +453,67 @@
 		0815B2561CB462A40074DA02 /* Magellan */ = {
 			isa = PBXGroup;
 			children = (
+				08F9F4C61CBC4AB400A158DE /* addPlaceTableViewCell.swift */,
+				08F9F4C41CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift */,
+				087702FE1CB855EC0009DE49 /* addHotelViewController.swift */,
+				0815B3251CB465F00074DA02 /* giveAdviceTableViewController.swift */,
+				0815B3261CB465F00074DA02 /* giveAdviceTableViewCell.swift */,
+				0815B3271CB465F00074DA02 /* searchParticipantsInAddGroupTrip.swift */,
+				0815B3281CB465F00074DA02 /* infoAndNotificationTableViewController.swift */,
+				0815B3291CB465F00074DA02 /* infoAndNotificationTableViewCell.swift */,
+				0815B32A1CB465F00074DA02 /* topTripsTableViewCell.swift */,
+				0815B32B1CB465F00074DA02 /* addParticipantsTableViewCell.swift */,
+				0815B32C1CB465F00074DA02 /* addParticipantsViewController.swift */,
+				0815B32D1CB465F00074DA02 /* topTripsViewController.swift */,
+				0815B32E1CB465F00074DA02 /* viewControllerCell.swift */,
+				0815B32F1CB465F00074DA02 /* tripShowTableViewCell.swift */,
+				0815B3301CB465F00074DA02 /* eventShowViewController.swift */,
+				0815B3311CB465F00074DA02 /* topEventsCell.swift */,
+				0815B3321CB465F00074DA02 /* userProfileTripCell.swift */,
+				0815B3331CB465F00074DA02 /* tripFeedCell.swift */,
+				0815B3341CB465F00074DA02 /* addGroupTripViewController.swift */,
+				0815B3351CB465F00074DA02 /* manualAddEventFieldsViewController.swift */,
+				0815B3361CB465F00074DA02 /* CollectionViewCell.swift */,
+				0815B3371CB465F00074DA02 /* tripPhotosCollectionViewController.swift */,
+				0815B3381CB465F00074DA02 /* addTripNameViewController.swift */,
+				0815B3391CB465F00074DA02 /* businessAddEventDateTimeViewController.swift */,
+				0815B33A1CB465F00074DA02 /* welcomeViewController.swift */,
+				0815B33B1CB465F00074DA02 /* businessServiceInfoViewController.swift */,
+				0815B33C1CB465F00074DA02 /* addFlightsViewController.swift */,
+				0815B33D1CB465F00074DA02 /* travelAgentOptionSelectViewController.swift */,
+				0815B33E1CB465F00074DA02 /* businessAddAServiceViewController.swift */,
+				0815B33F1CB465F00074DA02 /* TableViewSearchController.swift */,
+				0815B3401CB465F00074DA02 /* businessCategoriesSpecificShowViewController.swift */,
+				0815B3411CB465F00074DA02 /* ViewController.swift */,
+				0815B3421CB465F00074DA02 /* exploreTableViewCell.swift */,
+				0815B3431CB465F00074DA02 /* tripFeedViewController.swift */,
+				0815B3441CB465F00074DA02 /* tripShowSocialViewController.swift */,
+				0815B3451CB465F00074DA02 /* addBusinessCategoryViewController.swift */,
+				0815B3461CB465F00074DA02 /* tripBudgetViewController.swift */,
+				0815B3471CB465F00074DA02 /* userProfileViewController.swift */,
+				0815B3481CB465F00074DA02 /* exploreProfilesViewController.swift */,
+				0815B3491CB465F00074DA02 /* businessCategoryShowViewController.swift */,
+				0815B34A1CB465F00074DA02 /* travelAgentPlanTripViewController.swift */,
+				0815B34B1CB465F00074DA02 /* businessSignUpViewController.swift */,
+				0815B34C1CB465F00074DA02 /* businessHomeViewController.swift */,
+				0815B34D1CB465F00074DA02 /* businessAddEventTitleDescriptionViewController.swift */,
+				0815B34E1CB465F00074DA02 /* businessEventsShowViewController.swift */,
+				0815B34F1CB465F00074DA02 /* businessAddEventViewController.swift */,
+				0815B3501CB465F00074DA02 /* searchDestinationViewController.swift */,
+				0815B3511CB465F00074DA02 /* SearchResultsController.swift */,
+				0815B3521CB465F00074DA02 /* SignInViewController.swift */,
+				0815B3531CB465F00074DA02 /* SignUpViewController.swift */,
+				0815B3541CB465F00074DA02 /* PlanTripViewController.swift */,
+				0815B3551CB465F00074DA02 /* searchFlightsViewController.swift */,
+				0815B3561CB465F00074DA02 /* TripShowViewController.swift */,
+				0815B3571CB465F00074DA02 /* DestinationShowViewController.swift */,
+				0815B3581CB465F00074DA02 /* TripDatePickViewController.swift */,
+				0815B3591CB465F00074DA02 /* DayShowViewController.swift */,
+				0815B35A1CB465F00074DA02 /* EventAddViewController.swift */,
+				0815B35B1CB465F00074DA02 /* businessAddEventFrequencyViewController.swift */,
+				0815B35C1CB465F00074DA02 /* ManualAddEventController.swift */,
+				0815B35D1CB465F00074DA02 /* tripEventsShow.swift */,
 				0815B2571CB462A40074DA02 /* AppDelegate.swift */,
-				0815B2591CB462A40074DA02 /* ViewController.swift */,
 				0815B25B1CB462A40074DA02 /* Main.storyboard */,
 				0815B2611CB462A40074DA02 /* Assets.xcassets */,
 				0815B2631CB462A40074DA02 /* LaunchScreen.storyboard */,
@@ -67,6 +523,35 @@
 			path = Magellan;
 			sourceTree = "<group>";
 		};
+		2A9EA101360D4233BFD06B44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50D418EC649B9DAE9FCC8834 /* Pods.debug.xcconfig */,
+				A90C429EFB30ED5EABC28C61 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		32147BD1724F8C8FEE658F26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0815B3D21CB555680074DA02 /* libsqlite3.tbd */,
+				0815B3D01CB5555D0074DA02 /* libz.tbd */,
+				0815B3CE1CB555550074DA02 /* SystemConfiguration.framework */,
+				0815B3CC1CB5554D0074DA02 /* StoreKit.framework */,
+				0815B3CA1CB555460074DA02 /* Security.framework */,
+				0815B3C81CB5553F0074DA02 /* QuartzCore.framework */,
+				0815B3C61CB555300074DA02 /* CoreLocation.framework */,
+				0815B3C41CB5552A0074DA02 /* CoreGraphics.framework */,
+				0815B3C21CB555220074DA02 /* CFNetwork.framework */,
+				0815B3C01CB555170074DA02 /* AudioToolbox.framework */,
+				0815B3BE1CB554FE0074DA02 /* Parse.framework */,
+				0815B3BC1CB554F70074DA02 /* Bolts.framework */,
+				6DE40A7485F010F27C977BF2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +559,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0815B2691CB462A40074DA02 /* Build configuration list for PBXNativeTarget "Magellan" */;
 			buildPhases = (
+				FDF58D6FA378730DF938870A /* Check Pods Manifest.lock */,
 				0815B2501CB462A40074DA02 /* Sources */,
 				0815B2511CB462A40074DA02 /* Frameworks */,
 				0815B2521CB462A40074DA02 /* Resources */,
+				1F840813DFA1B943790E85C9 /* Embed Pods Frameworks */,
+				605DBFC6687AF9CA15D999BD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,22 +613,207 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0815B2DE1CB4651A0074DA02 /* empire_state_building.jpg in Resources */,
+				0815B2D91CB4651A0074DA02 /* man.png in Resources */,
+				0815B2E41CB4651A0074DA02 /* snow-capped-mountains.png in Resources */,
+				0815B2F31CB4651A0074DA02 /* new-eiffel-tower.jpg in Resources */,
+				0815B2DC1CB4651A0074DA02 /* uptrend.png in Resources */,
+				0815B2DD1CB4651A0074DA02 /* trip_events_skyscraper.jpeg in Resources */,
+				0815B3141CB4651A0074DA02 /* city-people-street-walking.jpg in Resources */,
+				0815B2F41CB4651A0074DA02 /* nyc-pic1.jpg in Resources */,
+				0815B2EA1CB4651A0074DA02 /* cycle-path.jpg in Resources */,
+				0815B31C1CB4651A0074DA02 /* earth-usa.png in Resources */,
+				0815B2FB1CB4651A0074DA02 /* eiffel-tower.jpg in Resources */,
+				0815B3161CB4651A0074DA02 /* new_hotel.png in Resources */,
+				0815B2ED1CB4651A0074DA02 /* statue-of-liberty.jpg in Resources */,
+				0815B2E31CB4651A0074DA02 /* Lighthouse-52.png in Resources */,
+				0815B30C1CB4651A0074DA02 /* Add User Filled-50.png in Resources */,
+				0815B2E91CB4651A0074DA02 /* Checked_User_Color.png in Resources */,
+				0815B3071CB4651A0074DA02 /* Eiffel Tower-50.png in Resources */,
+				0815B2F81CB4651A0074DA02 /* Checked User Filled-50.png in Resources */,
+				0815B2F51CB4651A0074DA02 /* bridge-pic.jpg in Resources */,
+				0815B3121CB4651A0074DA02 /* up_vote.png in Resources */,
+				0815B30A1CB4651A0074DA02 /* Easy to Find Filled-50.png in Resources */,
+				0815B2F21CB4651A0074DA02 /* bridge-over-ocean.jpg in Resources */,
+				0815B3041CB4651A0074DA02 /* camera.png in Resources */,
+				0815B2EF1CB4651A0074DA02 /* ticket.png in Resources */,
+				0815B2E81CB4651A0074DA02 /* big_ben.jpg in Resources */,
+				0815B3091CB4651A0074DA02 /* black_color.jpg in Resources */,
+				0815B2E61CB4651A0074DA02 /* france_mountains.jpg in Resources */,
 				0815B2651CB462A40074DA02 /* LaunchScreen.storyboard in Resources */,
+				0815B3131CB4651A0074DA02 /* search-7.png in Resources */,
+				0815B2FD1CB4651A0074DA02 /* Colosseum-50.png in Resources */,
 				0815B2621CB462A40074DA02 /* Assets.xcassets in Resources */,
+				0815B3111CB4651A0074DA02 /* Map Editing Filled-50.png in Resources */,
+				0815B2FA1CB4651A0074DA02 /* blank_man.jpg in Resources */,
+				0815B3001CB4651A0074DA02 /* Add_to_Favorites.png in Resources */,
+				0815B3011CB4651A0074DA02 /* hawaii_pic.jpg in Resources */,
+				0815B3031CB4651A0074DA02 /* skyscraper_alone.jpg in Resources */,
+				0815B2E51CB4651A0074DA02 /* city-cars-street-buildings.jpg in Resources */,
+				0815B2FE1CB4651A0074DA02 /* airplane.png in Resources */,
+				0815B2E71CB4651A0074DA02 /* dollar-sign.png in Resources */,
+				0815B2DF1CB4651A0074DA02 /* restaurant_seating.jpeg in Resources */,
+				0815B2F71CB4651A0074DA02 /* wilderness.jpg in Resources */,
+				0815B3171CB4651A0074DA02 /* hotel.png in Resources */,
+				0815B2F11CB4651A0074DA02 /* louvre-france-cropped.jpg in Resources */,
+				0815B2E11CB4651A0074DA02 /* Menu-50.png in Resources */,
+				0815B2D81CB4651A0074DA02 /* User.png in Resources */,
+				0815B26D1CB462C50074DA02 /* Podfile in Resources */,
+				0815B3061CB4651A0074DA02 /* tall_building.jpg in Resources */,
+				0815B2EB1CB4651A0074DA02 /* small-hill-town.png in Resources */,
+				0815B3081CB4651A0074DA02 /* home.png in Resources */,
+				0815B30D1CB4651A0074DA02 /* photo-7.png in Resources */,
+				0815B2FC1CB4651A0074DA02 /* presentation.png in Resources */,
+				0815B2E21CB4651A0074DA02 /* Checklist-50.png in Resources */,
+				0815B3021CB4651A0074DA02 /* airplane-symbol-7.png in Resources */,
+				0815B2F01CB4651A0074DA02 /* san_francisco_bay_bridge.jpg in Resources */,
+				0815B31B1CB4651A0074DA02 /* Tourist-50.png in Resources */,
+				0815B2FF1CB4651A0074DA02 /* Sedan Filled-50.png in Resources */,
+				0815B30B1CB4651A0074DA02 /* Numbered_List-50.png in Resources */,
+				0815B2EC1CB4651A0074DA02 /* nyc-hwy.jpg in Resources */,
+				0815B3191CB4651A0074DA02 /* Add Ticket Filled-50.png in Resources */,
+				0815B2F61CB4651A0074DA02 /* dubai-pic.jpg in Resources */,
+				0815B2F91CB4651A0074DA02 /* facebook_logo.png in Resources */,
+				0815B30F1CB4651A0074DA02 /* disclosure_indicator.png in Resources */,
+				0815B2E01CB4651A0074DA02 /* Check_mark.png in Resources */,
+				0815B2DB1CB4651A0074DA02 /* Map Marker Filled-50.png in Resources */,
+				0815B30E1CB4651A0074DA02 /* Magic-Wand.png in Resources */,
+				0815B3181CB4651A0074DA02 /* sail-boat-pic.jpg in Resources */,
 				0815B25D1CB462A40074DA02 /* Main.storyboard in Resources */,
+				0815B3051CB4651A0074DA02 /* User Groups Filled-50.png in Resources */,
+				0815B31A1CB4651A0074DA02 /* Globe.png in Resources */,
+				0815B3101CB4651A0074DA02 /* down_vote.png in Resources */,
+				0815B2EE1CB4651A0074DA02 /* bridge_fog.jpg in Resources */,
+				0815B31D1CB4651A0074DA02 /* Horseback Riding-50.png in Resources */,
+				0815B3151CB4651A0074DA02 /* eiffel_tower_pic_from_bog.jpg in Resources */,
+				0815B2DA1CB4651A0074DA02 /* paris-background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F840813DFA1B943790E85C9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		605DBFC6687AF9CA15D999BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDF58D6FA378730DF938870A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0815B2501CB462A40074DA02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0815B36B1CB465F00074DA02 /* userProfileTripCell.swift in Sources */,
+				0815B3801CB465F00074DA02 /* userProfileViewController.swift in Sources */,
+				0815B3611CB465F00074DA02 /* infoAndNotificationTableViewController.swift in Sources */,
+				0815B3861CB465F00074DA02 /* businessAddEventTitleDescriptionViewController.swift in Sources */,
+				0815B3961CB465F00074DA02 /* tripEventsShow.swift in Sources */,
+				0815B38A1CB465F00074DA02 /* SearchResultsController.swift in Sources */,
+				0815B3821CB465F00074DA02 /* businessCategoryShowViewController.swift in Sources */,
+				0815B3701CB465F00074DA02 /* tripPhotosCollectionViewController.swift in Sources */,
+				0815B38F1CB465F00074DA02 /* TripShowViewController.swift in Sources */,
+				0815B35E1CB465F00074DA02 /* giveAdviceTableViewController.swift in Sources */,
+				0815B3841CB465F00074DA02 /* businessSignUpViewController.swift in Sources */,
+				0815B3601CB465F00074DA02 /* searchParticipantsInAddGroupTrip.swift in Sources */,
+				0815B3831CB465F00074DA02 /* travelAgentPlanTripViewController.swift in Sources */,
+				0815B3661CB465F00074DA02 /* topTripsViewController.swift in Sources */,
+				0815B3711CB465F00074DA02 /* addTripNameViewController.swift in Sources */,
+				0815B35F1CB465F00074DA02 /* giveAdviceTableViewCell.swift in Sources */,
+				0815B3231CB4651B0074DA02 /* Event.swift in Sources */,
+				0815B3791CB465F00074DA02 /* businessCategoriesSpecificShowViewController.swift in Sources */,
+				0815B3871CB465F00074DA02 /* businessEventsShowViewController.swift in Sources */,
+				0815B3221CB4651B0074DA02 /* Day.swift in Sources */,
+				08F9F4C51CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift in Sources */,
+				0815B3771CB465F00074DA02 /* businessAddAServiceViewController.swift in Sources */,
+				0815B37F1CB465F00074DA02 /* tripBudgetViewController.swift in Sources */,
+				0815B38E1CB465F00074DA02 /* searchFlightsViewController.swift in Sources */,
+				0815B3741CB465F00074DA02 /* businessServiceInfoViewController.swift in Sources */,
+				0815B3891CB465F00074DA02 /* searchDestinationViewController.swift in Sources */,
+				0815B3951CB465F00074DA02 /* ManualAddEventController.swift in Sources */,
+				087702FF1CB855EC0009DE49 /* addHotelViewController.swift in Sources */,
+				0815B3201CB4651B0074DA02 /* Trip.swift in Sources */,
+				0815B3641CB465F00074DA02 /* addParticipantsTableViewCell.swift in Sources */,
+				0815B3681CB465F00074DA02 /* tripShowTableViewCell.swift in Sources */,
+				0815B31F1CB4651B0074DA02 /* User.swift in Sources */,
+				0815B36E1CB465F00074DA02 /* manualAddEventFieldsViewController.swift in Sources */,
+				0815B3651CB465F00074DA02 /* addParticipantsViewController.swift in Sources */,
+				0815B3751CB465F00074DA02 /* addFlightsViewController.swift in Sources */,
+				0815B37A1CB465F00074DA02 /* ViewController.swift in Sources */,
+				0815B3811CB465F00074DA02 /* exploreProfilesViewController.swift in Sources */,
+				0815B3931CB465F00074DA02 /* EventAddViewController.swift in Sources */,
+				0815B36D1CB465F00074DA02 /* addGroupTripViewController.swift in Sources */,
+				0815B37D1CB465F00074DA02 /* tripShowSocialViewController.swift in Sources */,
+				0815B38B1CB465F00074DA02 /* SignInViewController.swift in Sources */,
+				0815B3621CB465F00074DA02 /* infoAndNotificationTableViewCell.swift in Sources */,
+				0815B37E1CB465F00074DA02 /* addBusinessCategoryViewController.swift in Sources */,
+				0815B3691CB465F00074DA02 /* eventShowViewController.swift in Sources */,
+				0815B3631CB465F00074DA02 /* topTripsTableViewCell.swift in Sources */,
+				0815B37C1CB465F00074DA02 /* tripFeedViewController.swift in Sources */,
+				0815B36C1CB465F00074DA02 /* tripFeedCell.swift in Sources */,
+				0815B3211CB4651B0074DA02 /* Destination.swift in Sources */,
+				0815B3731CB465F00074DA02 /* welcomeViewController.swift in Sources */,
+				0815B36F1CB465F00074DA02 /* CollectionViewCell.swift in Sources */,
+				0815B3911CB465F00074DA02 /* TripDatePickViewController.swift in Sources */,
+				0815B3851CB465F00074DA02 /* businessHomeViewController.swift in Sources */,
+				0815B3941CB465F00074DA02 /* businessAddEventFrequencyViewController.swift in Sources */,
+				0815B3781CB465F00074DA02 /* TableViewSearchController.swift in Sources */,
 				0815B2601CB462A40074DA02 /* Magellan.xcdatamodeld in Sources */,
-				0815B25A1CB462A40074DA02 /* ViewController.swift in Sources */,
+				0815B3901CB465F00074DA02 /* DestinationShowViewController.swift in Sources */,
+				0815B3761CB465F00074DA02 /* travelAgentOptionSelectViewController.swift in Sources */,
+				0815B3721CB465F00074DA02 /* businessAddEventDateTimeViewController.swift in Sources */,
+				0815B38D1CB465F00074DA02 /* PlanTripViewController.swift in Sources */,
+				0815B3881CB465F00074DA02 /* businessAddEventViewController.swift in Sources */,
+				0815B31E1CB4651B0074DA02 /* Task.swift in Sources */,
+				0815B38C1CB465F00074DA02 /* SignUpViewController.swift in Sources */,
+				08F9F4C71CBC4AB400A158DE /* addPlaceTableViewCell.swift in Sources */,
+				0815B3921CB465F00074DA02 /* DayShowViewController.swift in Sources */,
+				0815B36A1CB465F00074DA02 /* topEventsCell.swift in Sources */,
+				0815B3671CB465F00074DA02 /* viewControllerCell.swift in Sources */,
+				0815B3241CB4651B0074DA02 /* Manager.swift in Sources */,
 				0815B2581CB462A40074DA02 /* AppDelegate.swift in Sources */,
+				0815B37B1CB465F00074DA02 /* exploreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,23 +924,43 @@
 		};
 		0815B26A1CB462A40074DA02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50D418EC649B9DAE9FCC8834 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Magellan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyethjackson.Magellan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Magellan_Bridging_Header.h;
 			};
 			name = Debug;
 		};
 		0815B26B1CB462A40074DA02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A90C429EFB30ED5EABC28C61 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Magellan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyethjackson.Magellan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Magellan_Bridging_Header.h;
 			};
 			name = Release;
 		};
@@ -290,6 +983,7 @@
 				0815B26B1CB462A40074DA02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

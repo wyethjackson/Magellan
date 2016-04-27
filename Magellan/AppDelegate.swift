@@ -8,17 +8,99 @@
 
 import UIKit
 import CoreData
+import GoogleMaps
+import Parse
+import Bolts
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    let vc1 = ViewController()
+    let vc2 = welcomeViewController()
+   
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+      
+//        if PFUser.currentUser()?.objectId != nil {
+//            
+//        } else {
+//            
+//             window!.rootViewController = vc2
+//        }
+//        
+//        vc2.
+        
+        GMSServices.provideAPIKey("AIzaSyAzIuZh7PAjV82VGkEH7MJArU98A1Gw87U")
+        
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("BwodSnG5VcaP01Pa2qicylQwQvtqgzqzcCr6vjI0",
+                               clientKey: "q44Mwq56G8K2jRbYnxMuK3l6ujrXrz5tKzrBfqhv")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        
+        //        let entityDescription = NSEntityDescription.entityForName("User", inManagedObjectContext: self.managedObjectContext)
+        //        let newUser = NSManagedObject(entity: entityDescription!, insertIntoManagedObjectContext: self.managedObjectContext)
+        
+        //        GMSServices.provideAPIKey("AIzaSyCoMIJGDscBbzCMULjUIx3NyfioFY4SbNs")
+        //        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //
+        //        let credentialsProvider = AWSCognitoCredentialsProvider(
+        //            regionType: CognitoRegionType,
+        //            identityPoolId: CognitoIdentityPoolId)
+        //        let configuration = AWSServiceConfiguration(
+        //            region: DefaultServiceRegionType,
+        //            credentialsProvider: credentialsProvider)
+        //        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+        
+        
+     
+        
+        
+        
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+//        var initialViewController: UIViewController
+//        let userDefaults = NSUserDefaults.standardUserDefaults()
+//        
+//        if PFUser.currentUser()?.objectId != nil
+//        {
+//            // if already logged in then redirect to MainViewController
+//            
+//            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Home") as! ViewController // 'MainController' is the storyboard id of MainViewController
+//        }
+//        else
+//        {
+//            //If not logged in then show LoginViewController
+//            initialViewController = mainStoryboard.instantiateViewControllerWithIdentifier("welcome") as! welcomeViewController//// // 'LoginController' is the storyboard id of LoginViewController
+//            
+//        }
+//        
+//        self.window?.rootViewController = initialViewController
+//        
+//        self.window?.makeKeyAndVisible()
+        
+
         return true
     }
+    
+    func application(application: UIApplication,
+                     openURL url: NSURL,
+                             sourceApplication: String?,
+                             annotation: AnyObject?) -> Bool {
+        
+        return true
+           }
+    
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -36,6 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
     }
 
     func applicationWillTerminate(application: UIApplication) {
