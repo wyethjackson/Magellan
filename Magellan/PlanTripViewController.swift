@@ -122,7 +122,14 @@ class PlanTripViewController: UIViewController, UITableViewDelegate, UITextField
            
           self.performSegueWithIdentifier("manualPlanTripToHome", sender: self)
         } else {
-            self.displayAlert("oops!", message: "You Must Enter A Trip Name and A Destination!")
+            
+            let alertController = UIAlertController(title: "Oops", message:
+                "Please enter a trip name and a destination", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+      
+
         }
     }
 

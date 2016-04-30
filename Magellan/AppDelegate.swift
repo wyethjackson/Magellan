@@ -11,6 +11,9 @@ import CoreData
 import GoogleMaps
 import Parse
 import Bolts
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
 
 
 @UIApplicationMain
@@ -62,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
         
         
-     
+      return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
         
@@ -96,8 +99,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      openURL url: NSURL,
                              sourceApplication: String?,
                              annotation: AnyObject?) -> Bool {
-        
+//        var handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+        // Add any custom logic here.
+        return FBSDKApplicationDelegate.sharedInstance().application(
+            application,
+            openURL: url,
+            sourceApplication: sourceApplication,
+            annotation: annotation)
         return true
+        
            }
     
 
@@ -118,7 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {

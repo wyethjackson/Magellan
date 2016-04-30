@@ -11,16 +11,22 @@ import Parse
 
 class addGroupTripViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate {
     
-    var participants = [String]()
+    var participants = [PFUser.currentUser()!["fullName"] as! String]
+    
   
     let searchController = UISearchController(searchResultsController: nil)
   
     var doubleAdd = false
-    var headers = ["Add Participants", "Trip Participants"]
-    
+    var headers = ["Trip Participants"]
+   
     @IBOutlet var tableView: UITableView!
   
     var filtered:[String] = []
+    
+    
+    @IBAction func nextButton(sender: AnyObject) {
+        self.performSegueWithIdentifier("addPeopleToTripToAddDestinationSegue", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +36,9 @@ class addGroupTripViewController: UIViewController, UITableViewDelegate, UISearc
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         self.tableView.tableHeaderView = searchController.searchBar
+        
+        
+        
 //        searchResultsTableView.dataSource = self
        
     }
@@ -47,11 +56,9 @@ class addGroupTripViewController: UIViewController, UITableViewDelegate, UISearc
     }
     
    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    if participants.count > 0 {
-        return 2
-    } else {
+  
         return 1
-    }
+    
     
     }
     
@@ -69,12 +76,9 @@ class addGroupTripViewController: UIViewController, UITableViewDelegate, UISearc
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else if section == 1 {
-            return participants.count
-        }
-        return 1
+       
+            return participants.count + 1
+       
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -100,8 +104,8 @@ class addGroupTripViewController: UIViewController, UITableViewDelegate, UISearc
         //        print(tripNames)
         
         cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
-        if indexPath.section == 0 {
-            cell.textLabel!.text = "Add People to Trip"
+        if indexPath.row == 0 {
+            cell.textLabel!.text = "Add Participant"
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         } else if indexPath.section == 1 {
             cell.textLabel!.text = participants[indexPath.row]

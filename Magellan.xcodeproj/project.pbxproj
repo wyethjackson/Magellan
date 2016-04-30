@@ -159,6 +159,11 @@
 		0815B3CF1CB555560074DA02 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3CE1CB555550074DA02 /* SystemConfiguration.framework */; };
 		0815B3D11CB5555D0074DA02 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3D01CB5555D0074DA02 /* libz.tbd */; };
 		0815B3D31CB555680074DA02 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0815B3D21CB555680074DA02 /* libsqlite3.tbd */; };
+		083917631CD14B9D0059B3E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083917621CD14B9D0059B3E1 /* FBSDKCoreKit.framework */; };
+		0860D0671CD2584B0081DC28 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0860D0661CD2584B0081DC28 /* FBSDKLoginKit.framework */; };
+		0860D0691CD258580081DC28 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0860D0681CD258580081DC28 /* FBSDKShareKit.framework */; };
+		0860D06B1CD26F5A0081DC28 /* searchParticipantsForTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0860D06A1CD26F5A0081DC28 /* searchParticipantsForTripTableViewCell.swift */; };
+		0876845F1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876845E1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift */; };
 		087702FF1CB855EC0009DE49 /* addHotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087702FE1CB855EC0009DE49 /* addHotelViewController.swift */; };
 		08F9F4C51CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9F4C41CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift */; };
 		08F9F4C71CBC4AB400A158DE /* addPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9F4C61CBC4AB400A158DE /* addPlaceTableViewCell.swift */; };
@@ -173,7 +178,7 @@
 		0815B2611CB462A40074DA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0815B2641CB462A40074DA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0815B2661CB462A40074DA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0815B26C1CB462C50074DA02 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		0815B26C1CB462C50074DA02 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0815B28A1CB4651A0074DA02 /* Magellan_Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magellan_Bridging_Header.h; sourceTree = "<group>"; };
 		0815B28B1CB4651A0074DA02 /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
 		0815B28C1CB4651A0074DA02 /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man.png; sourceTree = "<group>"; };
@@ -321,6 +326,11 @@
 		0815B3CE1CB555550074DA02 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0815B3D01CB5555D0074DA02 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0815B3D21CB555680074DA02 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		083917621CD14B9D0059B3E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		0860D0661CD2584B0081DC28 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		0860D0681CD258580081DC28 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		0860D06A1CD26F5A0081DC28 /* searchParticipantsForTripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchParticipantsForTripTableViewCell.swift; sourceTree = "<group>"; };
+		0876845E1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchForTravelEnthusiastsTableViewController.swift; sourceTree = "<group>"; };
 		087702FE1CB855EC0009DE49 /* addHotelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHotelViewController.swift; sourceTree = "<group>"; };
 		08F9F4C41CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addPlaceYouveBeenTableViewController.swift; sourceTree = "<group>"; };
 		08F9F4C61CBC4AB400A158DE /* addPlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addPlaceTableViewCell.swift; sourceTree = "<group>"; };
@@ -336,15 +346,18 @@
 			files = (
 				0815B3D31CB555680074DA02 /* libsqlite3.tbd in Frameworks */,
 				0815B3D11CB5555D0074DA02 /* libz.tbd in Frameworks */,
+				0860D0671CD2584B0081DC28 /* FBSDKLoginKit.framework in Frameworks */,
 				0815B3CF1CB555560074DA02 /* SystemConfiguration.framework in Frameworks */,
 				0815B3CD1CB5554D0074DA02 /* StoreKit.framework in Frameworks */,
 				0815B3CB1CB555460074DA02 /* Security.framework in Frameworks */,
 				0815B3C91CB5553F0074DA02 /* QuartzCore.framework in Frameworks */,
 				0815B3C71CB555310074DA02 /* CoreLocation.framework in Frameworks */,
+				0860D0691CD258580081DC28 /* FBSDKShareKit.framework in Frameworks */,
 				0815B3C51CB5552A0074DA02 /* CoreGraphics.framework in Frameworks */,
 				0815B3C31CB555220074DA02 /* CFNetwork.framework in Frameworks */,
 				0815B3C11CB555170074DA02 /* AudioToolbox.framework in Frameworks */,
 				0815B3BD1CB554F70074DA02 /* Bolts.framework in Frameworks */,
+				083917631CD14B9D0059B3E1 /* FBSDKCoreKit.framework in Frameworks */,
 				5F75DC16B72BD6F0FA1BDB88 /* libPods.a in Frameworks */,
 				0815B3BF1CB554FE0074DA02 /* Parse.framework in Frameworks */,
 			);
@@ -454,11 +467,13 @@
 			isa = PBXGroup;
 			children = (
 				08F9F4C61CBC4AB400A158DE /* addPlaceTableViewCell.swift */,
+				0876845E1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift */,
 				08F9F4C41CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift */,
 				087702FE1CB855EC0009DE49 /* addHotelViewController.swift */,
 				0815B3251CB465F00074DA02 /* giveAdviceTableViewController.swift */,
 				0815B3261CB465F00074DA02 /* giveAdviceTableViewCell.swift */,
 				0815B3271CB465F00074DA02 /* searchParticipantsInAddGroupTrip.swift */,
+				0860D06A1CD26F5A0081DC28 /* searchParticipantsForTripTableViewCell.swift */,
 				0815B3281CB465F00074DA02 /* infoAndNotificationTableViewController.swift */,
 				0815B3291CB465F00074DA02 /* infoAndNotificationTableViewCell.swift */,
 				0815B32A1CB465F00074DA02 /* topTripsTableViewCell.swift */,
@@ -537,6 +552,9 @@
 			children = (
 				0815B3D21CB555680074DA02 /* libsqlite3.tbd */,
 				0815B3D01CB5555D0074DA02 /* libz.tbd */,
+				0860D0681CD258580081DC28 /* FBSDKShareKit.framework */,
+				0860D0661CD2584B0081DC28 /* FBSDKLoginKit.framework */,
+				083917621CD14B9D0059B3E1 /* FBSDKCoreKit.framework */,
 				0815B3CE1CB555550074DA02 /* SystemConfiguration.framework */,
 				0815B3CC1CB5554D0074DA02 /* StoreKit.framework */,
 				0815B3CA1CB555460074DA02 /* Security.framework */,
@@ -791,6 +809,8 @@
 				0815B3691CB465F00074DA02 /* eventShowViewController.swift in Sources */,
 				0815B3631CB465F00074DA02 /* topTripsTableViewCell.swift in Sources */,
 				0815B37C1CB465F00074DA02 /* tripFeedViewController.swift in Sources */,
+				0876845F1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift in Sources */,
+				0860D06B1CD26F5A0081DC28 /* searchParticipantsForTripTableViewCell.swift in Sources */,
 				0815B36C1CB465F00074DA02 /* tripFeedCell.swift in Sources */,
 				0815B3211CB4651B0074DA02 /* Destination.swift in Sources */,
 				0815B3731CB465F00074DA02 /* welcomeViewController.swift in Sources */,
