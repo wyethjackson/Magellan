@@ -19,7 +19,22 @@ class searchParticipantsInAddGroupTrip: UITableViewController {
     var participants = [String]()
     var participantIds = [String]()
     var peopleIds = [String]()
-    var headers = ["Followers", "Others"]
+    var headers = ["Search Results", "Add Participant not on Passport"]
+    
+// 
+//    @IBOutlet var manualNameTextField: UITextField!
+//    
+//    @IBOutlet var manualEmailTextField: UITextField!
+//    
+//    @IBAction func addManualParticipant(sender: AnyObject) {
+//        if manualNameTextField.text != "" && manualEmailTextField.text != "" {
+//            headers[0] = "Participants Added"
+//        
+//            participants.append(manualNameTextField.text!)
+//        }
+//        
+//    }
+    
     
 //    override func viewDidAppear(animated: Bool) {
 //        tableView.tableHeaderView = searchController.searchBar
@@ -28,7 +43,7 @@ class searchParticipantsInAddGroupTrip: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+        
         
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
@@ -149,9 +164,10 @@ class searchParticipantsInAddGroupTrip: UITableViewController {
             
             //            cell.typeOfCompRoomLabel.text = comps[indexPath.row].roomType
             if searchController.active && searchController.searchBar.text != "" {
-                if indexPath.section == 0 {
+                if headers[indexPath.section] == "Search Results" {
                     if filteredFriends.count == 0 {
-                        cell.textLabel!.text = "No Followers match that name"
+                        
+                        cell.textLabel!.text = "No people match that name, but you can add them manually!"
                     }else {
                         cell.textLabel!.text = filteredFriends[indexPath.row]
                     }
@@ -170,15 +186,16 @@ class searchParticipantsInAddGroupTrip: UITableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType != .Checkmark {
-            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
-            self.tableView.reloadData()
-        } else {
-            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
-            self.tableView.reloadData()
+        if headers[indexPath.section] == "Search Results" {
+            if self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType != .Checkmark {
+                self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+                self.tableView.reloadData()
+            } else {
+                self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
+                self.tableView.reloadData()
+            }
         }
-        
+            
         
         
         

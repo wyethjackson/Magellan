@@ -28,6 +28,8 @@
 //#import "FMDB.h"
 #import "sqlite3.h"
 #import <time.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 
 #endif /* Magellan_Bridging_Header_h */

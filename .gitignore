@@ -1,2 +1,6 @@
 /Pods/GoogleMaps/Frameworks/GoogleMaps.framework
 /Pods/GoogleMaps/GoogleMapsSDKDemos/GoogleMaps.framework
+/FBSDKCoreKit.framework
+/FBSDKLoginKit.framework
+/FBSDKShareKit.framework
+

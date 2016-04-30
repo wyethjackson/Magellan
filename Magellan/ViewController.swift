@@ -137,10 +137,16 @@ class ViewController: UIViewController, UITableViewDelegate {
         //        let path = self.tableView.indexPathForSelectedRow!
         //        segue.tripShowViewController.detail = self.detailForIndexPath(path)
         //        print(tripIds[indexPath.row])
-        if tripNames.count > 0 {
-            dataToPass = tripIds[indexPath.row]
-            Manager.dataToPass = self.dataToPass
-            self.performSegueWithIdentifier("homeToTripShow", sender: tripIds[indexPath.row])
+        if indexPath.section == 0 {
+            if tripNames.count > 0 {
+                dataToPass = tripIds[indexPath.row]
+                Manager.dataToPass = self.dataToPass
+                self.performSegueWithIdentifier("homeToPlanATrip", sender: tripIds[indexPath.row])
+            }
+        }
+        
+        if indexPath.section == 1 {
+            self.performSegueWithIdentifier("mainToExploreOtherPeopleSegue", sender: self)
         }
         
         

@@ -12,11 +12,14 @@ import MapKit
 import CoreLocation
 import GoogleMaps
 
-class addTripNameViewController: UIViewController, UITextFieldDelegate, UISearchBarDelegate {
+class addTripNameViewController: UIViewController {
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController!
     var resultView: UITextView?
-
+   
+    @IBOutlet var searchBar: UISearchBar!
+   
+    
     var tripName = ""
     var destinationCity = String()
     var destinationCountry = String()
@@ -53,73 +56,75 @@ class addTripNameViewController: UIViewController, UITextFieldDelegate, UISearch
     @IBOutlet var mapView: MKMapView!
     
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar){
-//        self.destinationNameLabel.text = searchController.searchBar.text
-        //1
-        self.searchBarText = searchController!.searchBar.text!
-//        destinationLabel.text = searchController.searchBar.text!
-        searchBar.resignFirstResponder()
-        dismissViewControllerAnimated(true, completion: nil)
-        if self.mapView.annotations.count != 0{
-            annotation = self.mapView.annotations[0]
-            self.mapView.removeAnnotation(annotation)
-        }
-        //2
-        localSearchRequest = MKLocalSearchRequest()
-        localSearchRequest.naturalLanguageQuery = searchBar.text
-        localSearch = MKLocalSearch(request: localSearchRequest)
-        localSearch.startWithCompletionHandler { (localSearchResponse, error) -> Void in
-            
-            if localSearchResponse == nil{
-                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
-                return
-            }
-            //3
-            self.pointAnnotation = MKPointAnnotation()
-            self.pointAnnotation.title = searchBar.text
-            self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
-            self.destinationSearchLatitude = self.pointAnnotation.coordinate.latitude
-            self.destinationSearchLongitude = self.pointAnnotation.coordinate.longitude
-            let geoCoder = CLGeocoder()
-            let location = CLLocation(latitude: self.destinationSearchLatitude, longitude: self.destinationSearchLongitude)
-            
-            geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
-                
-                // Place details
-                var placeMark: CLPlacemark!
-                
-                placeMark = placemarks?[0]
-             
-                
-                // City
-                if let city = placeMark.addressDictionary!["City"] as? NSString {
-                    print(city)
-                    self.destinationCity = city as String
-                }
-                
-                
-                // Country
-                if let country = placeMark.addressDictionary!["Country"] as? NSString {
-                    print(country)
-                    self.destinationCountry = country as String
-                }
-                self.destination = "\(self.destinationCity), \(self.destinationCountry)"
-                self.destinationLabel.hidden = false
-                self.destinationLabelVisualBlur.hidden = false
-                self.destinationLabel.text = self.destination
-//                self.eventNavigationItem.title = "Top Events in \(self.destinationCity), \(self.destinationCountry)"
-            })
-            
-            
-
-            
-            self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
-            self.mapView.centerCoordinate = self.pointAnnotation.coordinate
-            self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
-        }
-    }
+    
+//    func searchBarSearchButtonClicked(searchBar: UISearchBar){
+////        self.destinationNameLabel.text = searchController.searchBar.text
+//        //1
+//        self.searchBarText = searchController!.searchBar.text!
+////        self.searchBarText = searchBar.text!
+////        destinationLabel.text = searchController.searchBar.text!
+//        searchBar.resignFirstResponder()
+//        dismissViewControllerAnimated(true, completion: nil)
+//        if self.mapView.annotations.count != 0{
+//            annotation = self.mapView.annotations[0]
+//            self.mapView.removeAnnotation(annotation)
+//        }
+//        //2
+//        localSearchRequest = MKLocalSearchRequest()
+//        localSearchRequest.naturalLanguageQuery = searchBar.text
+//        localSearch = MKLocalSearch(request: localSearchRequest)
+//        localSearch.startWithCompletionHandler { (localSearchResponse, error) -> Void in
+//            
+//            if localSearchResponse == nil{
+//                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.Alert)
+//                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+//                self.presentViewController(alertController, animated: true, completion: nil)
+//                return
+//            }
+//            //3
+//            self.pointAnnotation = MKPointAnnotation()
+//            self.pointAnnotation.title = searchBar.text
+//            self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
+//            self.destinationSearchLatitude = self.pointAnnotation.coordinate.latitude
+//            self.destinationSearchLongitude = self.pointAnnotation.coordinate.longitude
+//            let geoCoder = CLGeocoder()
+//            let location = CLLocation(latitude: self.destinationSearchLatitude, longitude: self.destinationSearchLongitude)
+//            
+//            geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+//                
+//                // Place details
+//                var placeMark: CLPlacemark!
+//                
+//                placeMark = placemarks?[0]
+//             
+//                
+//                // City
+//                if let city = placeMark.addressDictionary!["City"] as? NSString {
+//                    print(city)
+//                    self.destinationCity = city as String
+//                }
+//                
+//                
+//                // Country
+//                if let country = placeMark.addressDictionary!["Country"] as? NSString {
+//                    print(country)
+//                    self.destinationCountry = country as String
+//                }
+//                self.destination = "\(self.destinationCity), \(self.destinationCountry)"
+//                self.destinationLabel.hidden = false
+//                self.destinationLabelVisualBlur.hidden = false
+//                self.destinationLabel.text = self.destination
+////                self.eventNavigationItem.title = "Top Events in \(self.destinationCity), \(self.destinationCountry)"
+//            })
+//            
+//            
+//
+//            
+//            self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
+//            self.mapView.centerCoordinate = self.pointAnnotation.coordinate
+//            self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
+//        }
+//    }
     
     
     @IBAction func addDestinationButton(sender: AnyObject) {
@@ -142,6 +147,10 @@ class addTripNameViewController: UIViewController, UITextFieldDelegate, UISearch
         self.performSegueWithIdentifier("tripNameToPlanTrip", sender: self)
     }
     
+ 
+   
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -150,6 +159,7 @@ class addTripNameViewController: UIViewController, UITextFieldDelegate, UISearch
         self.whichInfo = Manager.dataToPass
         print(self.whichInfo)
         if self.whichInfo == "name" {
+            
             navigationItem.title = "Add a trip name"
             self.addTripButtonVisualBlur.hidden = false
             self.addTripNameButtonOutlet.hidden = false
@@ -161,24 +171,38 @@ class addTripNameViewController: UIViewController, UITextFieldDelegate, UISearch
             self.addDestinationButtonOutlet.hidden = true
           //  self.searchBarButtonOutlet.enabled = false
         } else if self.whichInfo == "destination" {
+            
+            
+//            navigationItem.title = "Search a Destination"
             resultsViewController = GMSAutocompleteResultsViewController()
             resultsViewController?.delegate = self
-//             self.searchController.loadViewIfNeeded()
+            
             searchController = UISearchController(searchResultsController: resultsViewController)
+            
             searchController?.searchResultsUpdater = resultsViewController
+            let subView = UIView(frame: CGRectMake(0, 65.0, 415.0, 45.0))
             
+            subView.addSubview((searchController?.searchBar)!)
+            self.view.addSubview(subView)
             // Put the search bar in the navigation bar.
-            searchController?.searchBar.sizeToFit()
-//            searchController.searchResultsUpdater = self
-            self.navigationItem.titleView = searchController?.searchBar
             
+            searchController?.searchBar.sizeToFit()
+            
+            
+            //            searchController.searchResultsUpdater = self
+            
+            //            searchController.active = true
+            //            self.searchBar = searchController.searchBar
+            //            searchController.searchBar.sizeToFit()
+            searchController.searchBar.placeholder = "Search a destination"
             // When UISearchController presents the results view, present it in
             // this view controller, not one further up the chain.
-            self.definesPresentationContext = true
+          
             
             // Prevent the navigation bar from being hidden when searching.
             searchController?.hidesNavigationBarDuringPresentation = false
-            navigationItem.title = "Search a Destination"
+            
+              self.definesPresentationContext = true
             self.mapView.hidden = false
             self.destinationLabelVisualBlur.hidden = true
             self.addTripButtonVisualBlur.hidden = true
@@ -192,7 +216,7 @@ class addTripNameViewController: UIViewController, UITextFieldDelegate, UISearch
             
             self.addDestinationVisualBlur.hidden = false
             self.destinationLabel.hidden = true
-          //  self.searchBarButtonOutlet.enabled = true
+//            self.searchBarButtonOutlet.enabled = true
             self.tripNameTextField.hidden = true
       
         }
@@ -210,9 +234,11 @@ extension addTripNameViewController: GMSAutocompleteResultsViewControllerDelegat
     func resultsController(resultsController: GMSAutocompleteResultsViewController!,
                            didAutocompleteWithPlace place: GMSPlace!) {
         searchController?.active = false
+        
         // Do something with the selected place.
         
-        self.searchBarText = searchController!.searchBar.text!
+//        self.searchBarText = searchController!.searchBar.text!
+//        self.searchBarText = searchBar.text!
         //        destinationLabel.text = searchController.searchBar.text!
 //        searchBar.resignFirstResponder()
         
