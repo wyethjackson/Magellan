@@ -23,6 +23,7 @@ class giveAdviceTableViewCell: UITableViewCell {
     
     @IBOutlet var viewTripButtonOutlet: UIButton!
     
+    @IBOutlet var adviceTextView: UITextView!
     
     @IBOutlet var submitButtonOutlet: UIButton!
     

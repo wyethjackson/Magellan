@@ -10,12 +10,21 @@ import UIKit
 import Parse
 
 class tripFeedViewController: UITableViewController, UISearchBarDelegate {
+    struct Trip {
+        var shareType: String
+        var tripName: String
+        var destinations: String
+       
+    }
+    
+    var tripArray = [Trip]()
     var searchActive : Bool = false
     var searchController = UISearchController(searchResultsController:nil)
     var friends = [String]()
     var filteredFriends = [String]()
     var image1 = [UIImage(named: "big_ben.jpg")]
-        var otherTripParticipants = ["Wyeth Jackson, Michael Thal", "Pier Selenica, Kumar Bhattacharyya"]
+    var otherTripParticipants = [String]()
+//        var otherTripParticipants = ["Wyeth Jackson, Michael Thal", "Pier Selenica, Kumar Bhattacharyya"]
 //        , UIImage(named: "eiffel-tower.jpg"), UIImage(named: "empire_state_building.jpg")]
     var image2 = [UIImage(named: "bridge_fog.jpg")]
 //        , UIImage(named: "skyscraper_alone.jpg"), UIImage(named: "hawaii_pic.jpg")]
@@ -76,12 +85,10 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
                     shareSpecificTripQuery.findObjectsInBackgroundWithBlock({ (tripObjects, error) in
                         if let specificTrips = tripObjects {
                             for tripObject in specificTrips {
-                                self.kindOfPost.append("Trip")
-                                self.tripName.append(tripObject["name"] as! String)
-                                let destinations = tripObject["destinations"].componentsJoinedByString("; ")
-                                self.tripInfo.append(destinations)
-                                print("trip name")
-                                print(self.tripName)
+                                let tripDestinations = tripObject["destinations"].componentsJoinedByString("; ")
+                                var trip = Trip(shareType: "Trip", tripName: tripObject["name"] as! String, destinations: tripDestinations)
+                              
+                               self.tripArray.append(trip)
                                 var users : PFQuery = PFUser.query()!
                                 users.whereKey("objectId", equalTo: tripObject["userId"])
                                 users.findObjectsInBackgroundWithBlock({ (userObjects, error) in
@@ -183,29 +190,29 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if kindOfPost[indexPath.section] != "Trip" && indexPath.row == 0 {
+        if tripArray[indexPath.section].shareType != "Trip" && indexPath.row == 0 {
             print("row")
             print(indexPath.row)
             print(indexPath.section)
             print("not trip")
             return 0
            
-        } else if kindOfPost[indexPath.section] != "Trip" && indexPath.row == 1 {
+        } else if tripArray[indexPath.section].shareType != "Trip" && indexPath.row == 1 {
            
                 return 0
-        } else if kindOfPost[indexPath.section] != "Trip" && indexPath.row == 2 {
+        } else if tripArray[indexPath.section].shareType != "Trip" && indexPath.row == 2 {
            return 0
             
-        } else if kindOfPost[indexPath.section] != "Blog Post" && indexPath.row == 3 {
+        } else if tripArray[indexPath.section].shareType != "Blog Post" && indexPath.row == 3 {
             print("not blog post")
             return 0
             
             
-        } else if kindOfPost[indexPath.section] != "Blog Post" && indexPath.row == 4 {
+        } else if tripArray[indexPath.section].shareType != "Blog Post" && indexPath.row == 4 {
             return 0
             
             
-        } else if kindOfPost[indexPath.section] != "Photos" && indexPath.row == 5 {
+        } else if tripArray[indexPath.section].shareType != "Photos" && indexPath.row == 5 {
             print("not photos")
           return 0
         }
@@ -235,12 +242,11 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
         if indexPath.row == 0 {
               cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! tripFeedCell
 //                     cell.userName.text = names[indexPath.section]
-                    cell.tripInfo.text = "Destinations: \(tripInfo[indexPath.section])"
+                    cell.tripInfo.text = "Destinations: \(tripArray[indexPath.section].destinations)"
             cell.tripInfo.numberOfLines = 3
-            cell.participantsLabel.numberOfLines = 2
-            cell.participantsLabel.text = "Other Participants:\n" + otherTripParticipants[indexPath.section]
+  
         
-                    cell.tripName.text = tripName[indexPath.section]
+                    cell.tripName.text = tripArray[indexPath.section].tripName
         }
         
         if indexPath.row == 1 {

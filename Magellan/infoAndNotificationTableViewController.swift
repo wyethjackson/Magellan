@@ -23,9 +23,32 @@ class infoAndNotificationTableViewController: UITableViewController {
     
     var locations = [String]()
     
+    @IBAction func unwindToVC(segue:UIStoryboardSegue) {
+        if(segue.sourceViewController .isKindOfClass(addPlaceYouveBeenTableViewController)) {
+            var view2:addPlaceYouveBeenTableViewController = segue.sourceViewController as! addPlaceYouveBeenTableViewController
+           locations = view2.totalLocations
+            numberOfLocations = locations.count
+            tableView.reloadData()
+          
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var users : PFQuery = PFUser.query()!
+        users.whereKey("objectId", equalTo: (PFUser.currentUser()?.objectId!)!)
+        users.findObjectsInBackgroundWithBlock { (objects, error) in
+            if let userQuery = objects {
+                for object in userQuery {
+                    if object["destinationsVisited"] != nil {
+                        self.locations = object["destinationsVisited"] as! [String]
+                        self.numberOfLocations = self.locations.count
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        }
     
     }
     
@@ -85,7 +108,8 @@ class infoAndNotificationTableViewController: UITableViewController {
                 } else {
                     cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
                     cell.mainLabel.hidden = false
-                    cell.mainLabel.text = locations[indexPath.row]
+                    var locationString = locations.joinWithSeparator(", ")
+                    cell.mainLabel.text = locationString
                 }
             }
             

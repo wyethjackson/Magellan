@@ -24,6 +24,16 @@ class addPlaceYouveBeenTableViewController: UITableViewController {
     var localSearchResponse:MKLocalSearchResponse!
     var pointAnnotation:MKPointAnnotation!
     var locations = [String]()
+    var totalLocations = [String]()
+    
+    
+    @IBAction func addDestinations(sender: AnyObject) {
+       self.performSegueWithIdentifier("addPlaceToMyActivitySegue", sender: self)
+        
+        
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +46,9 @@ class addPlaceYouveBeenTableViewController: UITableViewController {
         
         // Put the search bar in the navigation bar.
         searchController?.searchBar.sizeToFit()
-        self.navigationItem.titleView = searchController?.searchBar
-        searchController?.searchBar.placeholder = "Search Address"
+        tableView.tableHeaderView = searchController?.searchBar
+       
+        searchController?.searchBar.placeholder = "Search Destination"
         
         // When UISearchController presents the results view, present it in
         // this view controller, not one further up the chain.
@@ -45,7 +56,18 @@ class addPlaceYouveBeenTableViewController: UITableViewController {
         
         // Prevent the navigation bar from being hidden when searching.
         searchController?.hidesNavigationBarDuringPresentation = false
-
+        var users : PFQuery = PFUser.query()!
+        users.whereKey("objectId", equalTo: (PFUser.currentUser()?.objectId!)!)
+        users.findObjectsInBackgroundWithBlock { (objects, error) in
+            if let userQuery = objects {
+                for object in userQuery {
+                    if object["destinationsVisited"] != nil {
+                        self.totalLocations = object["destinationsVisited"] as! [String]
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        }
         
     }
     
@@ -59,8 +81,8 @@ class addPlaceYouveBeenTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if locations.count > 0 {
-            return locations.count
+        if totalLocations.count > 0 {
+            return totalLocations.count
         } else {
             return 1
         }
@@ -76,7 +98,7 @@ class addPlaceYouveBeenTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Locations"
+        return "Destinations Visited"
     }
     
 //    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -88,9 +110,9 @@ class addPlaceYouveBeenTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! addPlaceTableViewCell
-        if locations.count > 0 {
+        if totalLocations.count > 0 {
         
-        cell.locationLabel.text = locations[indexPath.row]
+        cell.locationLabel.text = totalLocations[indexPath.row]
         } else {
             cell.locationLabel.text = "No locations have been added"
         }
@@ -160,10 +182,22 @@ extension addPlaceYouveBeenTableViewController: GMSAutocompleteResultsViewContro
             if specificLocation[2] == "United States" {
             
             self.locations.append(specificLocation.joinWithSeparator(", "))
+                self.totalLocations.append(specificLocation.joinWithSeparator(", "))
             } else {
                 self.locations.append(noStateLocations.joinWithSeparator(", "))
+                self.totalLocations.append(noStateLocations.joinWithSeparator(", "))
             }
+            
             self.tableView.reloadData()
+            var users : PFQuery = PFUser.query()!
+            users.getObjectInBackgroundWithId((PFUser.currentUser()?.objectId)!) { (user: PFObject?, error: NSError?) in
+                if error != nil {
+                    print(error)
+                } else if let user = user {
+                    user["destinationsVisited"] = self.totalLocations
+                    user.saveInBackground()
+                }
+            }
 //            self.destination = "\(self.destinationCity), \(self.destinationCountry)"
 //            self.destinationLabel.hidden = false
 //            self.destinationLabelVisualBlur.hidden = false

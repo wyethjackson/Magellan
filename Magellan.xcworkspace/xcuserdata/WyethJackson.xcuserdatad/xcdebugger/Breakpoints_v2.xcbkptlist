@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Magellan/ViewController.swift"
-            timestampString = "483651335.77086"
+            timestampString = "483927241.386844"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "loadFirstPhotoForPlace(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Magellan/addPlaceYouveBeenTableViewController.swift"
-            timestampString = "482201802.43731"
+            timestampString = "483896302.022929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "resultsController(_:didAutocompleteWithPlace:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -113,6 +113,115 @@
             endingLineNumber = "104"
             landmarkName = "filterContentForSearchText(_:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Magellan/tripFeedViewController.swift"
+            timestampString = "483915958.058979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Magellan/giveAdviceTableViewController.swift"
+            timestampString = "483921903.947713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "Trip"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Magellan.giveAdviceTableViewController.headers.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Magellan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WyethJackson/Desktop/Magellan_Application/Magellan/Magellan/giveAdviceTableViewController.swift"
+                  timestampString = "483921904.002538"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Magellan.giveAdviceTableViewController.headers.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Magellan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WyethJackson/Desktop/Magellan_Application/Magellan/Magellan/giveAdviceTableViewController.swift"
+                  timestampString = "483921904.051066"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Magellan.giveAdviceTableViewController.init (style : __C.UITableViewStyle) -&gt; Magellan.giveAdviceTableViewController"
+                  moduleName = "Magellan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WyethJackson/Desktop/Magellan_Application/Magellan/Magellan/giveAdviceTableViewController.swift"
+                  timestampString = "483921904.051216"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Magellan.giveAdviceTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Magellan.giveAdviceTableViewController"
+                  moduleName = "Magellan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WyethJackson/Desktop/Magellan_Application/Magellan/Magellan/giveAdviceTableViewController.swift"
+                  timestampString = "483921904.051309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "101">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Magellan.giveAdviceTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Magellan.giveAdviceTableViewController&gt;"
+                  moduleName = "Magellan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/WyethJackson/Desktop/Magellan_Application/Magellan/Magellan/giveAdviceTableViewController.swift"
+                  timestampString = "483921904.051398"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

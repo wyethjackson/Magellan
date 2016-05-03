@@ -71,10 +71,15 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if destinationStrings.count > 0 {
-            return destinationStrings.count
+            if section == 0 {
+                return destinationStrings.count
+            } else if section == 1 {
+                return 1
+            }
         } else {
             return 1
         }
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
