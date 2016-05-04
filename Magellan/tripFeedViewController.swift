@@ -11,6 +11,7 @@ import Parse
 
 class tripFeedViewController: UITableViewController, UISearchBarDelegate {
     struct Trip {
+        var name: String
         var shareType: String
         var tripName: String
         var destinations: String
@@ -86,16 +87,16 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
                         if let specificTrips = tripObjects {
                             for tripObject in specificTrips {
                                 let tripDestinations = tripObject["destinations"].componentsJoinedByString("; ")
-                                var trip = Trip(shareType: "Trip", tripName: tripObject["name"] as! String, destinations: tripDestinations)
-                              
-                               self.tripArray.append(trip)
+                                let tripName = tripObject["name"]
+                                
+                                
                                 var users : PFQuery = PFUser.query()!
                                 users.whereKey("objectId", equalTo: tripObject["userId"])
                                 users.findObjectsInBackgroundWithBlock({ (userObjects, error) in
                                     if let specificUsers = userObjects {
                                         for userObject in specificUsers {
-                                            self.names.append(userObject["fullName"] as! String)
-                                            print(self.names)
+                                            var trip = Trip(name: userObject["fullName"] as! String, shareType: "Trip", tripName: tripName as! String, destinations: tripDestinations)
+                                                self.tripArray.append(trip)
                                         }
                                     }
                                     self.tableView.reloadData()
@@ -147,12 +148,12 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return names.count
+        return tripArray.count
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-      return 6
+      return 5
         
         
     }
@@ -180,13 +181,13 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
 //    
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
-        header.contentView.backgroundColor = UIColor.blackColor() //make the background color light blue
+        header.contentView.backgroundColor = UIColor.blueColor() //make the background color light blue
         header.textLabel!.textColor = UIColor.whiteColor() //make the text white
-        header.alpha = 0.5 //make the header transparent
+//        header.alpha = 0.5 //make the header transparent
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.names[section]
+        return tripArray[section].name
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -200,34 +201,31 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
         } else if tripArray[indexPath.section].shareType != "Trip" && indexPath.row == 1 {
            
                 return 0
-        } else if tripArray[indexPath.section].shareType != "Trip" && indexPath.row == 2 {
-           return 0
             
-        } else if tripArray[indexPath.section].shareType != "Blog Post" && indexPath.row == 3 {
+        } else if tripArray[indexPath.section].shareType != "Blog Post" && indexPath.row == 2 {
             print("not blog post")
             return 0
             
             
-        } else if tripArray[indexPath.section].shareType != "Blog Post" && indexPath.row == 4 {
+        } else if tripArray[indexPath.section].shareType != "Blog Post" && indexPath.row == 3 {
             return 0
             
             
-        } else if tripArray[indexPath.section].shareType != "Photos" && indexPath.row == 5 {
+        } else if tripArray[indexPath.section].shareType != "Photos" && indexPath.row == 4 {
             print("not photos")
           return 0
         }
         
                 if indexPath.row == 0 {
-                    return 95
+                    
+                    return 75
                 } else if indexPath.row == 1 {
                     return 47
                 } else if indexPath.row == 2 {
-                    return 47
-                } else if indexPath.row == 3 {
                     return 150
-                } else if indexPath.row == 4 {
+                } else if indexPath.row == 3 {
                     return 100
-                } else if indexPath.row == 5 {
+                } else if indexPath.row == 4 {
                     return 150
         }
                     return 100
@@ -251,20 +249,19 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
         
         if indexPath.row == 1 {
              cell = tableView.dequeueReusableCellWithIdentifier("commentButtonsCell", forIndexPath: indexPath) as! tripFeedCell
-        } else if indexPath.row == 2 {
-            cell = tableView.dequeueReusableCellWithIdentifier("commentsCell", forIndexPath: indexPath) as! tripFeedCell
+
         }
         
         
         
-        if indexPath.row == 3 {
+        if indexPath.row == 2 {
              cell = tableView.dequeueReusableCellWithIdentifier("blogPostCell", forIndexPath: indexPath) as! tripFeedCell
             
             cell.hidden = true
-        } else if indexPath.row == 4 {
+        } else if indexPath.row == 3 {
               cell = tableView.dequeueReusableCellWithIdentifier("blogCommentsCell", forIndexPath: indexPath) as! tripFeedCell
             cell.hidden = true
-        } else if indexPath.row == 5 {
+        } else if indexPath.row == 4 {
               cell = tableView.dequeueReusableCellWithIdentifier("photosCell", forIndexPath: indexPath) as! tripFeedCell
             cell.hidden = true
         }
@@ -321,11 +318,7 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 1 {
-            self.performSegueWithIdentifier("tripFeedToAdviceSegue", sender: self)
-        } else if indexPath.row == 2 {
-            self.performSegueWithIdentifier("tripFeedToShowEventsSegue", sender: self)
-        }
+     
     }
     
     override func viewDidAppear(animated: Bool) {

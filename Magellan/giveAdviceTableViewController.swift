@@ -146,9 +146,9 @@ class giveAdviceTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
-        header.contentView.backgroundColor = UIColor.blackColor() //make the background color light blue
+        header.contentView.backgroundColor = UIColor.blueColor() //make the background color light blue
         header.textLabel!.textColor = UIColor.whiteColor() //make the text white
-        header.alpha = 0.5 //make the header transparent
+//        header.alpha = 0.5 //make the header transparent
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

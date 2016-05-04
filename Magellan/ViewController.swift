@@ -16,8 +16,12 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet var magellanImageView: UIImageView!
     
-    
-    
+    struct Trip {
+        var name: String
+        var destinations: String
+        var tripId: String
+    }
+    var tripArray = [Trip]()
     var noDestination = [String]()
     
     @IBOutlet var tableView: UITableView!
@@ -70,9 +74,9 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if destinationStrings.count > 0 {
+        if tripArray.count > 0 {
             if section == 0 {
-                return destinationStrings.count
+               return tripArray.count
             } else if section == 1 {
                 return 1
             }
@@ -86,7 +90,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         
 //        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "homeCell")
         let cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as! viewControllerCell
-
+        cell.layer.borderColor = UIColor.blueColor().CGColor
         //        print(userTripCount)
         //        print(tripNames)
       
@@ -99,10 +103,10 @@ class ViewController: UIViewController, UITableViewDelegate {
         cell.backgroundView = blurView
         
         
-        if destinationStrings.count > 0 {
-            cell.tripNameLabel.text = tripNames[indexPath.row]
-           print(destinationStrings)
-            cell.destinationsLabel.text = destinationStrings[indexPath.row]
+        if tripArray.count > 0 {
+            cell.tripNameLabel.text = tripArray[indexPath.row].name
+           
+            cell.destinationsLabel.text = tripArray[indexPath.row].destinations
             let disclosureImage = UIImage(named: "disclosure_indicator.png")
             let disclosureView = UIImageView(image: disclosureImage)
           
@@ -112,7 +116,7 @@ class ViewController: UIViewController, UITableViewDelegate {
 //            upcomingTripsBlurView.hidden = false
             cell.tripNameLabel.hidden = false
             cell.destinationsLabel.hidden = false
-            cell.textLabel!.text = ""
+            cell.textLabel!.hidden = true
             
 //            upcomingTripsLabel.hidden = false
         } else if noDestination.count > 0 {
@@ -120,13 +124,14 @@ class ViewController: UIViewController, UITableViewDelegate {
 //            upcomingTripsLabel.hidden = true
             cell.tripNameLabel.hidden = true
             cell.destinationsLabel.hidden = true
-            
+            cell.textLabel!.hidden = false
             cell.textLabel?.text = noDestination[0]
         }
         
         if indexPath.section == 1 {
             cell.tripNameLabel.hidden = true
             cell.destinationsLabel.hidden = true
+            cell.textLabel?.hidden = false
             cell.textLabel!.text = explorePeople
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         }
@@ -143,8 +148,8 @@ class ViewController: UIViewController, UITableViewDelegate {
         //        segue.tripShowViewController.detail = self.detailForIndexPath(path)
         //        print(tripIds[indexPath.row])
         if indexPath.section == 0 {
-            if tripNames.count > 0 {
-                dataToPass = tripIds[indexPath.row]
+            if tripArray.count > 0 {
+                dataToPass = tripArray[indexPath.row].tripId
                 Manager.dataToPass = self.dataToPass
                 self.performSegueWithIdentifier("homeToPlanATrip", sender: tripIds[indexPath.row])
             }
@@ -159,38 +164,38 @@ class ViewController: UIViewController, UITableViewDelegate {
         
     }
     
-    func loadFirstPhotoForPlace(placeID: String) {
-        GMSPlacesClient.sharedClient().lookUpPhotosForPlaceID(placeID) { (photos, error) -> Void in
-            if let error = error {
-                // TODO: handle the error.
-                print("Error: \(error.description)")
-            } else {
-                print(photos?.results)
-                if let firstPhoto = photos?.results.first {
-                    print("YOOOOOOOOOO")
-                    print(firstPhoto)
-                    self.loadImageForMetadata(firstPhoto)
-                    
-                }
-            }
-        }
-    }
-    
-    func loadImageForMetadata(photoMetadata: GMSPlacePhotoMetadata) {
-        GMSPlacesClient.sharedClient()
-            .loadPlacePhoto(photoMetadata, constrainedToSize: magellanImageView.bounds.size,
-                            scale: self.magellanImageView.window!.screen.scale) { (photo, error) -> Void in
-                                if let error = error {
-                                    // TODO: handle the error.
-                                    print("Error: \(error.description)")
-                                } else {
-                                    print("whatuuuuuuup")
-                                    self.magellanImageView.image = photo;
-//                                    self.attributionTextView.attributedText = photoMetadata.attributions;
-                                }
-        }
-    }
-    
+//    func loadFirstPhotoForPlace(placeID: String) {
+//        GMSPlacesClient.sharedClient().lookUpPhotosForPlaceID(placeID) { (photos, error) -> Void in
+//            if let error = error {
+//                // TODO: handle the error.
+//                print("Error: \(error.description)")
+//            } else {
+//                print(photos?.results)
+//                if let firstPhoto = photos?.results.first {
+//                    print("YOOOOOOOOOO")
+//                    print(firstPhoto)
+//                    self.loadImageForMetadata(firstPhoto)
+//                    
+//                }
+//            }
+//        }
+//    }
+//    
+//    func loadImageForMetadata(photoMetadata: GMSPlacePhotoMetadata) {
+//        GMSPlacesClient.sharedClient()
+//            .loadPlacePhoto(photoMetadata, constrainedToSize: magellanImageView.bounds.size,
+//                            scale: self.magellanImageView.window!.screen.scale) { (photo, error) -> Void in
+//                                if let error = error {
+//                                    // TODO: handle the error.
+//                                    print("Error: \(error.description)")
+//                                } else {
+//                                    print("whatuuuuuuup")
+//                                    self.magellanImageView.image = photo;
+////                                    self.attributionTextView.attributedText = photoMetadata.attributions;
+//                                }
+//        }
+//    }
+//    
     
     
     
@@ -198,7 +203,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         
         
-        loadFirstPhotoForPlace("ChIJ72FRK-msB4gRY8DqvqZG6mw")
+//        loadFirstPhotoForPlace("ChIJ72FRK-msB4gRY8DqvqZG6mw")
         
         
         activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
@@ -213,30 +218,31 @@ class ViewController: UIViewController, UITableViewDelegate {
         var plannedTripsQuery = PFQuery(className: "Trips")
         
         var userTrips = plannedTripsQuery.whereKey("userId", equalTo: PFUser.currentUser()!.objectId!)
-        
+        userTrips.addAscendingOrder("createdAt")
         userTrips.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             
             if let trips = objects {
                 //                print(trips)
                 self.userTripCount = trips.count
                 var count = 0
-                var tripsArray = []
+//                var tripsArray = []
                 var counter = 0
                 
                 for object in trips {
                     //                    print(object["destinations"] as? NSArray)
                     //tripsArray[count] = object["destinations"][count]
-                    self.tripNames.append(object["name"] as! String)
-                    self.tripIds.append(object.objectId! as String)
+//                    self.tripNames.append(object["name"] as! String)
+//                    self.tripIds.append(object.objectId! as String)
                     //                   print(self.tripIds)
-                    var numOfDestinations = []
+//                    var numOfDestinations = []
                     
                     //playground **
                     
-                    self.destinations.append(object["destinations"] as! [String])
+//                    self.destinations.append(object["destinations"] as! [String])
                   
 
-                    
+                    var tripId = object.objectId!
+                    var tripName = object["name"]
                     count += 1
                     
                     var destinationQuery = PFQuery(className: "Destinations")
@@ -247,7 +253,10 @@ class ViewController: UIViewController, UITableViewDelegate {
                             for destinationObject in destinationQueries {
                                 self.destinationCities.append(destinationObject["destinationCity"] as! String)
                             }
-                            self.destinationStrings.append(self.destinationCities.joinWithSeparator(", "))
+                            var destinationString = self.destinationCities.joinWithSeparator(", ")
+                            self.tripArray.append(Trip(name: tripName as! String, destinations: destinationString, tripId: tripId))
+                       
+                            
                         }
                         
                         counter += 1
@@ -275,9 +284,9 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
-        header.contentView.backgroundColor = UIColor.blackColor() //make the background color light blue
+        header.contentView.backgroundColor = UIColor.blueColor() //make the background color light blue
         header.textLabel!.textColor = UIColor.whiteColor() //make the text white
-        header.alpha = 0.5 //make the header transparent
+//        header.alpha = 0.5 //make the header transparent
     }
     
     override func viewDidAppear(animated: Bool) {

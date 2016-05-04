@@ -25,6 +25,12 @@ class userProfileViewController: UIViewController {
     var following = false
     var headers = ["Trips"]
     
+    struct Person {
+        var name: String
+    }
+    
+    var person = Person(name: "")
+    
 //    var userId = PFUser.currentUser()?.objectId
     
     @IBOutlet var followButton: UIButton!
@@ -101,12 +107,14 @@ class userProfileViewController: UIViewController {
         userQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if let user = objects {
                 for object in user {
+                    self.person.name = object["fullName"] as! String
                     
-                        self.firstName = object["firstName"] as! String
-                        self.lastName = object["lastName"] as! String
-                     self.nameLabel.text = self.firstName + " " + self.lastName
+                    
+                    
                     
                 }
+                
+                self.navigationItem.title = self.person.name
             }
         }
         

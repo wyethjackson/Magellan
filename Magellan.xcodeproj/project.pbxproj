@@ -123,7 +123,6 @@
 		0815B37C1CB465F00074DA02 /* tripFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3431CB465F00074DA02 /* tripFeedViewController.swift */; };
 		0815B37D1CB465F00074DA02 /* tripShowSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3441CB465F00074DA02 /* tripShowSocialViewController.swift */; };
 		0815B37E1CB465F00074DA02 /* addBusinessCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3451CB465F00074DA02 /* addBusinessCategoryViewController.swift */; };
-		0815B37F1CB465F00074DA02 /* tripBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3461CB465F00074DA02 /* tripBudgetViewController.swift */; };
 		0815B3801CB465F00074DA02 /* userProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3471CB465F00074DA02 /* userProfileViewController.swift */; };
 		0815B3811CB465F00074DA02 /* exploreProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3481CB465F00074DA02 /* exploreProfilesViewController.swift */; };
 		0815B3821CB465F00074DA02 /* businessCategoryShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B3491CB465F00074DA02 /* businessCategoryShowViewController.swift */; };
@@ -165,6 +164,8 @@
 		0860D06B1CD26F5A0081DC28 /* searchParticipantsForTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0860D06A1CD26F5A0081DC28 /* searchParticipantsForTripTableViewCell.swift */; };
 		0876845F1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876845E1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift */; };
 		087702FF1CB855EC0009DE49 /* addHotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087702FE1CB855EC0009DE49 /* addHotelViewController.swift */; };
+		08EBB9231CD8F63A00A28002 /* tripAdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EBB9221CD8F63A00A28002 /* tripAdviceTableViewController.swift */; };
+		08EBB9251CD8F72300A28002 /* tripAdviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EBB9241CD8F72300A28002 /* tripAdviceTableViewCell.swift */; };
 		08F9F4C51CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9F4C41CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift */; };
 		08F9F4C71CBC4AB400A158DE /* addPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9F4C61CBC4AB400A158DE /* addPlaceTableViewCell.swift */; };
 		5F75DC16B72BD6F0FA1BDB88 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE40A7485F010F27C977BF2 /* libPods.a */; };
@@ -290,7 +291,6 @@
 		0815B3431CB465F00074DA02 /* tripFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripFeedViewController.swift; sourceTree = "<group>"; };
 		0815B3441CB465F00074DA02 /* tripShowSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripShowSocialViewController.swift; sourceTree = "<group>"; };
 		0815B3451CB465F00074DA02 /* addBusinessCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addBusinessCategoryViewController.swift; sourceTree = "<group>"; };
-		0815B3461CB465F00074DA02 /* tripBudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripBudgetViewController.swift; sourceTree = "<group>"; };
 		0815B3471CB465F00074DA02 /* userProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userProfileViewController.swift; sourceTree = "<group>"; };
 		0815B3481CB465F00074DA02 /* exploreProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = exploreProfilesViewController.swift; sourceTree = "<group>"; };
 		0815B3491CB465F00074DA02 /* businessCategoryShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = businessCategoryShowViewController.swift; sourceTree = "<group>"; };
@@ -332,6 +332,8 @@
 		0860D06A1CD26F5A0081DC28 /* searchParticipantsForTripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchParticipantsForTripTableViewCell.swift; sourceTree = "<group>"; };
 		0876845E1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchForTravelEnthusiastsTableViewController.swift; sourceTree = "<group>"; };
 		087702FE1CB855EC0009DE49 /* addHotelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHotelViewController.swift; sourceTree = "<group>"; };
+		08EBB9221CD8F63A00A28002 /* tripAdviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripAdviceTableViewController.swift; sourceTree = "<group>"; };
+		08EBB9241CD8F72300A28002 /* tripAdviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripAdviceTableViewCell.swift; sourceTree = "<group>"; };
 		08F9F4C41CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addPlaceYouveBeenTableViewController.swift; sourceTree = "<group>"; };
 		08F9F4C61CBC4AB400A158DE /* addPlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addPlaceTableViewCell.swift; sourceTree = "<group>"; };
 		50D418EC649B9DAE9FCC8834 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -466,6 +468,8 @@
 		0815B2561CB462A40074DA02 /* Magellan */ = {
 			isa = PBXGroup;
 			children = (
+				08EBB9241CD8F72300A28002 /* tripAdviceTableViewCell.swift */,
+				08EBB9221CD8F63A00A28002 /* tripAdviceTableViewController.swift */,
 				08F9F4C61CBC4AB400A158DE /* addPlaceTableViewCell.swift */,
 				0876845E1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift */,
 				08F9F4C41CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift */,
@@ -504,7 +508,6 @@
 				0815B3431CB465F00074DA02 /* tripFeedViewController.swift */,
 				0815B3441CB465F00074DA02 /* tripShowSocialViewController.swift */,
 				0815B3451CB465F00074DA02 /* addBusinessCategoryViewController.swift */,
-				0815B3461CB465F00074DA02 /* tripBudgetViewController.swift */,
 				0815B3471CB465F00074DA02 /* userProfileViewController.swift */,
 				0815B3481CB465F00074DA02 /* exploreProfilesViewController.swift */,
 				0815B3491CB465F00074DA02 /* businessCategoryShowViewController.swift */,
@@ -784,8 +787,8 @@
 				0815B3871CB465F00074DA02 /* businessEventsShowViewController.swift in Sources */,
 				0815B3221CB4651B0074DA02 /* Day.swift in Sources */,
 				08F9F4C51CBC3B9B00A158DE /* addPlaceYouveBeenTableViewController.swift in Sources */,
+				08EBB9231CD8F63A00A28002 /* tripAdviceTableViewController.swift in Sources */,
 				0815B3771CB465F00074DA02 /* businessAddAServiceViewController.swift in Sources */,
-				0815B37F1CB465F00074DA02 /* tripBudgetViewController.swift in Sources */,
 				0815B38E1CB465F00074DA02 /* searchFlightsViewController.swift in Sources */,
 				0815B3741CB465F00074DA02 /* businessServiceInfoViewController.swift in Sources */,
 				0815B3891CB465F00074DA02 /* searchDestinationViewController.swift in Sources */,
@@ -809,6 +812,7 @@
 				0815B3691CB465F00074DA02 /* eventShowViewController.swift in Sources */,
 				0815B3631CB465F00074DA02 /* topTripsTableViewCell.swift in Sources */,
 				0815B37C1CB465F00074DA02 /* tripFeedViewController.swift in Sources */,
+				08EBB9251CD8F72300A28002 /* tripAdviceTableViewCell.swift in Sources */,
 				0876845F1CD3DF80005DBC3E /* searchForTravelEnthusiastsTableViewController.swift in Sources */,
 				0860D06B1CD26F5A0081DC28 /* searchParticipantsForTripTableViewCell.swift in Sources */,
 				0815B36C1CB465F00074DA02 /* tripFeedCell.swift in Sources */,

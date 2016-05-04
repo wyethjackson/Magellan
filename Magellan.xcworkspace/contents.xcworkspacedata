@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Magellan/tripAdviceTableViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:addPlaceYouveBeenTableViewController.swift">
    </FileRef>
    <FileRef

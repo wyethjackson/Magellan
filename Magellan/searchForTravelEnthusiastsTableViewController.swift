@@ -11,8 +11,12 @@ import Parse
 
 class searchForTravelEnthusiastsTableViewController: UITableViewController {
      let searchController = UISearchController(searchResultsController: nil)
-    var filteredPeople = [String]()
-    var people = ["Chris Sacca", "Peter Thiel", "Mark Cuban"]
+    struct Person {
+        var name: String
+        var userId: String
+    }
+    var filteredPeople = [Person]()
+    var people = [Person]()
     
     var headers = ["Top Results", "Invite people to join"]
     var join = ["Email invite", "Facebook invite", "tweet at someone"]
@@ -28,6 +32,16 @@ class searchForTravelEnthusiastsTableViewController: UITableViewController {
 //        searchController.searchBar.scopeButtonTitles = ["All", "Chocolate", "Hard", "Other"]
         tableView.tableHeaderView = searchController.searchBar
         
+        var users : PFQuery = PFUser.query()!
+        users.whereKey("homeCountry", equalTo: "United States")
+        users.findObjectsInBackgroundWithBlock { (userObjects, error) in
+            if let userObjects = userObjects {
+                for userObject in userObjects {
+                    self.people.append(Person(name: userObject["fullName"] as! String, userId: userObject.objectId!))
+                }
+                self.tableView.reloadData()
+            }
+        }
         
     }
     
@@ -41,15 +55,15 @@ class searchForTravelEnthusiastsTableViewController: UITableViewController {
         
         userQuery?.findObjectsInBackgroundWithBlock({ (objects, error) in
             if let users = objects {
-                if self.filteredPeople[0] == "No matches for that name" {
+                if self.filteredPeople[0].name == "No matches for that name" {
                     self.filteredPeople.removeAtIndex(0)
                 }
                 for object in users {
-                    self.filteredPeople.append(object["fullName"] as! String)
+                    self.filteredPeople.append(Person(name: object["fullName"] as! String, userId: object.objectId!))
                 }
             }
             if self.filteredPeople.count == 0 {
-                self.filteredPeople.append("No matches for that name")
+                self.filteredPeople.append(Person(name: "No matches for that name", userId: ""))
             }
             self.tableView.reloadData()
         })
@@ -82,9 +96,11 @@ class searchForTravelEnthusiastsTableViewController: UITableViewController {
         if indexPath.section == 0 {
             var name = String()
             if searchController.active && searchController.searchBar.text != "" {
-                name = filteredPeople[indexPath.row]
+               
+                name = filteredPeople[indexPath.row].name
+                
             } else {
-                name = people[indexPath.row]
+                name = people[indexPath.row].name
             }
             cell.textLabel!.text = name
         } else {
@@ -106,13 +122,14 @@ class searchForTravelEnthusiastsTableViewController: UITableViewController {
         userQuery?.findObjectsInBackgroundWithBlock({ (objects, error) in
             if let users = objects {
                 self.filteredPeople = []
-                if self.filteredPeople.count > 0 {
-                    if self.filteredPeople[0] == "No matches for that name" {
-                        self.filteredPeople.removeAtIndex(0)
-                    }
-                }
+//                if self.filteredPeople.count > 0 {
+//                    if self.filteredPeople[0].name == "No matches for that name" {
+//                        self.filteredPeople.removeAtIndex(0)
+//                    }
+//                }
                 for object in users {
-                    self.filteredPeople.append(object["fullName"] as! String)
+                    self.filteredPeople.append(Person(name: object["fullName"] as! String, userId: object.objectId!))
+                    print(self.filteredPeople)
                 }
             }
             var secondUserQuery = PFUser.query()
@@ -121,22 +138,39 @@ class searchForTravelEnthusiastsTableViewController: UITableViewController {
             userQuery?.findObjectsInBackgroundWithBlock({ (secondObjects, error) in
                 if let secondUsers = secondObjects {
                     for secondObject in secondUsers {
-                        print(secondObject["fullName"] as! String)
+                        var nameInUse = false
                         for user in self.filteredPeople {
-                            if user != secondObject["fullName"] as! String {
-                                self.filteredPeople.append(secondObject["fullName"] as! String)
+                            if user.name == secondObject["fullName"] as! String {
+                                nameInUse = true
+                                
                             }
+                        }
+                        if nameInUse == false {
+                            self.filteredPeople.append(Person(name: secondObject["fullName"] as! String, userId: secondObject.objectId!))
                         }
                     }
                 }
                 if self.filteredPeople.count == 0 {
-                    self.filteredPeople.append("No matches for that name")
+                    self.filteredPeople.append(Person(name: "No matches for that name", userId: ""))
                 }
                 self.tableView.reloadData()
             })
                 
             
         })
+        
+        
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 {
+            if searchController.active && searchController.searchBar.text != "" {
+                Manager.dataToPass = filteredPeople[indexPath.row].userId
+            } else {
+                Manager.dataToPass = people[indexPath.row].userId
+            }
+                self.performSegueWithIdentifier("searchPeopleToProfileSegue", sender: self)
+        }
         
         
     }
