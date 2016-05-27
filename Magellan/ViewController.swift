@@ -151,7 +151,7 @@ class ViewController: UIViewController, UITableViewDelegate {
             if tripArray.count > 0 {
                 dataToPass = tripArray[indexPath.row].tripId
                 Manager.dataToPass = self.dataToPass
-                self.performSegueWithIdentifier("homeToPlanATrip", sender: tripIds[indexPath.row])
+                self.performSegueWithIdentifier("homeToPlanATrip", sender: self)
             }
         }
         

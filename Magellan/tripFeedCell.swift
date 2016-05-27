@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class tripFeedCell: UITableViewCell {
-    var favoritedTrip = false
+//    var favoritedTrip = false
     @IBAction func morePhotosButton(sender: AnyObject) {
         
     }
@@ -40,21 +40,22 @@ class tripFeedCell: UITableViewCell {
     @IBOutlet var imageTripNameLabel: UILabel!
     
     @IBOutlet var favoriteButtonOutlet: UIButton!
-    @IBAction func favoriteButton(sender: AnyObject) {
-        if favoritedTrip == false {
-        favoriteButtonOutlet.setTitle("Favorited", forState: UIControlState.Normal)
-            favoriteButtonOutlet.layer.cornerRadius = 3
-            favoriteButtonOutlet.backgroundColor = UIColor.yellowColor()
-            favoritedTrip = true
-        } else {
-            favoriteButtonOutlet.setTitle("Favorite", forState: UIControlState.Normal)
-            favoriteButtonOutlet.backgroundColor = UIColor.whiteColor()
-            favoritedTrip = false
-            
-        }
-        
-        
-    }
+//    @IBAction func favoriteButton(sender: AnyObject) {
+//        if favoritedTrip == false {
+//        favoriteButtonOutlet.setTitle("Following", forState: UIControlState.Normal)
+//            favoriteButtonOutlet.layer.cornerRadius = 3
+//            favoriteButtonOutlet.backgroundColor = UIColor.blueColor()
+//            favoriteButtonOutlet.titleLabel?.textColor = UIColor.whiteColor()
+//            favoritedTrip = true
+//        } else {
+//            favoriteButtonOutlet.setTitle("Follow", forState: UIControlState.Normal)
+//            favoriteButtonOutlet.backgroundColor = UIColor.whiteColor()
+//            favoritedTrip = false
+//            
+//        }
+//        
+//        
+//    }
     
     
     @IBOutlet var postedImage1: UIImageView!

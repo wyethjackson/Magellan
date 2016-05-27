@@ -37,7 +37,9 @@ class searchForTravelEnthusiastsTableViewController: UITableViewController {
         users.findObjectsInBackgroundWithBlock { (userObjects, error) in
             if let userObjects = userObjects {
                 for userObject in userObjects {
-                    self.people.append(Person(name: userObject["fullName"] as! String, userId: userObject.objectId!))
+                    if userObject.objectId != PFUser.currentUser()?.objectId {
+                        self.people.append(Person(name: userObject["fullName"] as! String, userId: userObject.objectId!))
+                    }
                 }
                 self.tableView.reloadData()
             }
@@ -128,8 +130,9 @@ class searchForTravelEnthusiastsTableViewController: UITableViewController {
 //                    }
 //                }
                 for object in users {
-                    self.filteredPeople.append(Person(name: object["fullName"] as! String, userId: object.objectId!))
-                    print(self.filteredPeople)
+                    if object.objectId != PFUser.currentUser()?.objectId {
+                        self.filteredPeople.append(Person(name: object["fullName"] as! String, userId: object.objectId!))
+                    }
                 }
             }
             var secondUserQuery = PFUser.query()
@@ -146,7 +149,9 @@ class searchForTravelEnthusiastsTableViewController: UITableViewController {
                             }
                         }
                         if nameInUse == false {
-                            self.filteredPeople.append(Person(name: secondObject["fullName"] as! String, userId: secondObject.objectId!))
+                            if secondObject.objectId != PFUser.currentUser()?.objectId! {
+                                self.filteredPeople.append(Person(name: secondObject["fullName"] as! String, userId: secondObject.objectId!))
+                            }
                         }
                     }
                 }

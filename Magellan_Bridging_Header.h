@@ -30,6 +30,7 @@
 #import <time.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-
+#import <Parse/PFObject+Subclass.h>
+#import <Parse/Parse.h>
 
 #endif /* Magellan_Bridging_Header_h */
