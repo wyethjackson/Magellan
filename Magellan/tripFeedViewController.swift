@@ -15,9 +15,12 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
         var shareType: String
         var tripName: String
         var destinations: String
+        var tripId: String
+        var favoritedTrip: Bool
        
     }
-    
+    var fullName = String()
+     var favoritedTrip = false
     var tripArray = [Trip]()
     var searchActive : Bool = false
     var searchController = UISearchController(searchResultsController:nil)
@@ -86,20 +89,44 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
                     shareSpecificTripQuery.findObjectsInBackgroundWithBlock({ (tripObjects, error) in
                         if let specificTrips = tripObjects {
                             for tripObject in specificTrips {
-                                let tripDestinations = tripObject["destinations"].componentsJoinedByString("; ")
-                                let tripName = tripObject["name"]
-                                
-                                
+                                var tripDestinations = tripObject["destinations"].componentsJoinedByString("; ")
+                                var tripName = tripObject["name"]
+                                var tripId = tripObject.objectId!
+                                self.fullName = ""
+                                  self.favoritedTrip = false
                                 var users : PFQuery = PFUser.query()!
                                 users.whereKey("objectId", equalTo: tripObject["userId"])
                                 users.findObjectsInBackgroundWithBlock({ (userObjects, error) in
                                     if let specificUsers = userObjects {
+                                        
                                         for userObject in specificUsers {
-                                            var trip = Trip(name: userObject["fullName"] as! String, shareType: "Trip", tripName: tripName as! String, destinations: tripDestinations)
-                                                self.tripArray.append(trip)
+                                            print(userObject["fullName"])
+                                           self.fullName = userObject["fullName"] as! String
+                                            
                                         }
+                                      
+                                        var userTripsQuery = PFQuery(className: "user_trips")
+                                        userTripsQuery.whereKey("tripId", equalTo: tripId)
+                                        userTripsQuery.whereKey("userId", equalTo: PFUser.currentUser()!.objectId!)
+                                        userTripsQuery.findObjectsInBackgroundWithBlock({ (userTripsObjects, error) in
+                                            if let userTripsObjects = userTripsObjects {
+                                               
+                                                for userTripsObject in userTripsObjects {
+                                                    if userTripsObject["userId"] != nil {
+                                                        self.favoritedTrip = true
+                                                    } else {
+                                                        self.favoritedTrip = false
+                                                    }
+                                                }
+                                                var trip = Trip(name: self.fullName, shareType: "Trip", tripName: tripName as! String, destinations: tripDestinations, tripId: tripId, favoritedTrip: self.favoritedTrip)
+                                               
+                                                self.tripArray.append(trip)
+                                               
+                                                 self.tableView.reloadData()
+                                            }
+                                        })
                                     }
-                                    self.tableView.reloadData()
+                                   
                                 })
                             }
                         }
@@ -192,10 +219,6 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if tripArray[indexPath.section].shareType != "Trip" && indexPath.row == 0 {
-            print("row")
-            print(indexPath.row)
-            print(indexPath.section)
-            print("not trip")
             return 0
            
         } else if tripArray[indexPath.section].shareType != "Trip" && indexPath.row == 1 {
@@ -203,7 +226,7 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
                 return 0
             
         } else if tripArray[indexPath.section].shareType != "Blog Post" && indexPath.row == 2 {
-            print("not blog post")
+         
             return 0
             
             
@@ -212,7 +235,7 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
             
             
         } else if tripArray[indexPath.section].shareType != "Photos" && indexPath.row == 4 {
-            print("not photos")
+            
           return 0
         }
         
@@ -235,6 +258,7 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         var cell: tripFeedCell!
       
         if indexPath.row == 0 {
@@ -249,7 +273,17 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
         
         if indexPath.row == 1 {
              cell = tableView.dequeueReusableCellWithIdentifier("commentButtonsCell", forIndexPath: indexPath) as! tripFeedCell
-
+            if tripArray[indexPath.section].favoritedTrip == true {
+                cell.favoriteButtonOutlet.titleLabel?.text = "Following"
+                cell.favoriteButtonOutlet.titleLabel?.textColor = UIColor.whiteColor()
+                cell.favoriteButtonOutlet.backgroundColor = UIColor.blueColor()
+            } else {
+                cell.favoriteButtonOutlet.backgroundColor = UIColor.whiteColor()
+                cell.favoriteButtonOutlet.titleLabel?.textColor = UIColor.blackColor()
+                cell.favoriteButtonOutlet.titleLabel!.text = "Follow"
+            }
+            cell.favoriteButtonOutlet.tag = indexPath.section
+            cell.favoriteButtonOutlet.addTarget(self, action: "followAction:", forControlEvents: .TouchUpInside)
         }
         
         
@@ -317,13 +351,44 @@ class tripFeedViewController: UITableViewController, UISearchBarDelegate {
         
     }
     
+    @IBAction func followAction(sender: UIButton) {
+        if tripArray[sender.tag].favoritedTrip == true {
+            var userTripsQuery = PFQuery(className: "user_trips")
+            userTripsQuery.whereKey("userId", equalTo: (PFUser.currentUser()?.objectId!)!)
+            userTripsQuery.whereKey("tripId", equalTo: tripArray[sender.tag].tripId)
+            userTripsQuery.findObjectsInBackgroundWithBlock({ (objects, error) in
+                if let objects = objects {
+                    for object in objects {
+                        object.deleteInBackground()
+                    }
+                }
+            })
+        } else {
+            var user_trips = PFObject(className:"user_trips")
+            user_trips["userId"] = PFUser.currentUser()?.objectId!
+            user_trips["tripId"] = tripArray[sender.tag].tripId
+            
+            user_trips.saveInBackgroundWithBlock { (success: Bool, error: NSError?) in
+                if (success) {
+                    self.tripArray[sender.tag].favoritedTrip = true
+                    self.tableView.reloadData()
+                } else {
+                    
+                }
+            }
+        }
+      
+    
+        
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
      
     }
     
-    override func viewDidAppear(animated: Bool) {
-        tripFeedTableView.reloadData()
-    }
+//    override func viewDidAppear(animated: Bool) {
+//        tripFeedTableView.reloadData()
+//    }
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
 //        filteredFriends = friends.filter { friend in

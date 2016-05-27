@@ -38,12 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        vc2.
         
         GMSServices.provideAPIKey("AIzaSyAzIuZh7PAjV82VGkEH7MJArU98A1Gw87U")
-        
+//        User.parseClassName()
+//        User.registerSubclass()
         Parse.enableLocalDatastore()
         
         // Initialize Parse.
         Parse.setApplicationId("BwodSnG5VcaP01Pa2qicylQwQvtqgzqzcCr6vjI0",
                                clientKey: "q44Mwq56G8K2jRbYnxMuK3l6ujrXrz5tKzrBfqhv")
+//
+//        let parseConfiguration = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
+//            ParseMutableClientConfiguration.applicationId = "trehtreh897&jfhr90"
+//            ParseMutableClientConfiguration.clientKey = "grgtrioeggjtroirs%^&678"
+//            ParseMutableClientConfiguration.server = "https://magellantravelapp.herokuapp.com/parse"
+//        })
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
