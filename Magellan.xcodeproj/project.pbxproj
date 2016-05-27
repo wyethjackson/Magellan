@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0811BDA21CDA5D8500C9C19F /* Subclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0811BDA11CDA5D8500C9C19F /* Subclass.swift */; };
 		0815B2581CB462A40074DA02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815B2571CB462A40074DA02 /* AppDelegate.swift */; };
 		0815B25D1CB462A40074DA02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0815B25B1CB462A40074DA02 /* Main.storyboard */; };
 		0815B2601CB462A40074DA02 /* Magellan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0815B25E1CB462A40074DA02 /* Magellan.xcdatamodeld */; };
@@ -172,6 +173,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0811BDA11CDA5D8500C9C19F /* Subclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subclass.swift; sourceTree = "<group>"; };
 		0815B2541CB462A40074DA02 /* Magellan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magellan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0815B2571CB462A40074DA02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0815B25C1CB462A40074DA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 		0815B24B1CB462A40074DA02 = {
 			isa = PBXGroup;
 			children = (
+				0811BDA11CDA5D8500C9C19F /* Subclass.swift */,
 				0815B26C1CB462C50074DA02 /* Podfile */,
 				0815B28A1CB4651A0074DA02 /* Magellan_Bridging_Header.h */,
 				0815B28B1CB4651A0074DA02 /* User.png */,
@@ -796,6 +799,7 @@
 				087702FF1CB855EC0009DE49 /* addHotelViewController.swift in Sources */,
 				0815B3201CB4651B0074DA02 /* Trip.swift in Sources */,
 				0815B3641CB465F00074DA02 /* addParticipantsTableViewCell.swift in Sources */,
+				0811BDA21CDA5D8500C9C19F /* Subclass.swift in Sources */,
 				0815B3681CB465F00074DA02 /* tripShowTableViewCell.swift in Sources */,
 				0815B31F1CB4651B0074DA02 /* User.swift in Sources */,
 				0815B36E1CB465F00074DA02 /* manualAddEventFieldsViewController.swift in Sources */,
